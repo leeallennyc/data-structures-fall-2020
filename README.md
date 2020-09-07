@@ -8,7 +8,7 @@ Documentation and weekly submission for PGDV 5110 Syllabus, Fall 2020.
 
 | Week          | Summary of Changes|   
 | ------------- |:-----------------:| 
-| Week 1        | Summary:          | 
+| Week 1        | Summary: Week 1 Assignment (Node.js Req/Res), Set up GitHub, Cloud9, + Readings| 
 | Week 2        | Summary:          |   
 | Week 3        | Summary:          |  
 | Week 4        | Summary:          | 
