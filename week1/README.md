@@ -25,14 +25,14 @@ Update your GitHub repository with the relevant files: your js file and ten txt 
 
 --- 
 ### Observations and Learnings
-* One observation is around the need to refactoring my code with arrow function syntax.
+* One observation is around the need to refactor my code with arrow function syntax.
 * Learning how to be less verbose with my code.
-* The need lots of extra time to experiment. 
+* The need for lots of extra time to experiment. 
  
 --- 
 ### Challenges
 * Syncing Across a variety of different tools with Git: Visual Studio Code, AWS Cloud 9, GitHub Desktop, Remote Repos.
-* Refactoring
-* Will need put time and resources into the idea of Async and Promises.
+* Refactoring is a challenge.
+* Will need put time and resources into the idea of Async, Promises, etc.  
 
 
