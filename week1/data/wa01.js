@@ -23,7 +23,7 @@ var meetingSuffixes = [
     'm10.txt'
     ];
     
-    // Create htmlPage Array
+// Create htmlPage Array
 var htmlPages = [
     'https://parsons.nyc./aa/m01.html',
     'https://parsons.nyc./aa/m02.html',
@@ -37,13 +37,11 @@ var htmlPages = [
     'https://parsons.nyc./aa/m10.html',
     ];
 
-
 // Outputs each element in the meetingSuffixes array
 let textSuffix = (item, index, arr) => {
     meetingSuffixes.forEach(textSuffix);
     arr[index] = item;
 }
-
 
 // Outputs each element in the htmlPage array
 let htmlURL = (item, index, arr) => {
