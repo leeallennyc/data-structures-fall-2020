@@ -60,15 +60,16 @@ fs.writeFileSync('data/thesisTitles.txt', thesisTitles);
 * [Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 --- 
 ### Process
-* The approach was to find the parent of the <h4> as to not grab extra content from all the <td> tags.
-* After getting parents of the <h4> the approach I took was to only get back the results that matched the "text" NodeTypes.
+
+* The approach was to find the parent of the `h4` tags and not grab extra content from all the `td` tags.
+* After getting parents of the `h4` ,the approach I took was to only get back the results that matched the `text` NodeTypes.
 * From there I parsed and split the data, and output it to the empty array.
 * After experimenting with the Cheerio method: contents(), I realized that there were hidden characters that might be helpful in parsing. Specifically the Tab keys, extra spaces, and "@" symbol.
-* Looking closely at the syntax, I observed that the addresses which needed to be parsed had a common pattern of UPPERCASE characters followed by "-"  and ![alt text](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2/images/All%20Caps%20Preview.png "Tabs and New Line")'\n\t\t\t\t\t\t' + the number of the street "152 West 71st" followed by comma: example "FRIDAY NIGHT STEP - \n\t\t\t\t\t\t26 West 84th Street,"
+* Looking closely at the syntax, I observed that the addresses which needed to be parsed had a common pattern of UPPERCASE characters followed by "-"  and ![alt text](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2/images/All%20Caps%20Preview.png "Tabs and New Line")'\n\t\t\t\t\t\t' + the number of the street "152 West 71st" followed by comma. 
 
 * ![alt text](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2/images/Tabs%202.png "Tabs and New Line")
-* After trying to match the '\n\t\t\t\t\t\t' with Regex (and failing miserably), I decided that it might be better to get rid of all extra whitespaces first. 
-* The regex syntax I found was /\s\s+/g and could help deal with the whitespace issue.  
+* After trying to match the `'\n\t\t\t\t\t\t'` with Regex (and failing miserably), I decided that it might be better to get rid of all extra whitespaces first. 
+* The regex syntax I found was `/\s\s+/g` and could help deal with the whitespace issue.  
  
 --- 
 ### Observations & Learnings
