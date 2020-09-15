@@ -1,0 +1,17 @@
+{
+  "name": "week2",
+  "version": "1.0.0",
+  "description": "--- Assignment 2 Detailed Description: [Here](https://github.com/visualizedata/data-structures/blob/master/weekly_assignment_02.md)",
+  "main": "wa02.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon wa02.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
