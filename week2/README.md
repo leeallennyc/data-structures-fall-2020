@@ -84,5 +84,5 @@ fs.writeFileSync('data/thesisTitles.txt', thesisTitles);
 ---
 ### Challenges
 * One of the biggest challenges I encountered was with the order of operations. 
-* I wasn't able to completely solve the problem, and I will continue working on it.
-* Mostly, these issues are around splitting on mulitple characters, and then joining again.
+* I wasn't able to completely solve the problem, in the allotted time, but solved it soon after.
+* Mostly, these issues are around splitting, rejoining, and splitting again on multiple characters. 
