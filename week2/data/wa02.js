@@ -35,4 +35,4 @@ $('h4').slice(2).each(function(i, elem) {
     streetAddressArray.push(value[0]); // --> pushing 0 index of value to the empty array.
 }); 
 // Write the file
-fs.writeFileSync('streetAddresses.txt', streetAddressArray);
+fs.writeFileSync('streetAddresses.txt', JSON.stringify(streetAddressArray));
