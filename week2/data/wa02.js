@@ -19,27 +19,20 @@ var $ = cheerio.load(content);
 var streetAddressArray = [];
 
 // Grab and loop through each 'h4' element
-$('h4').each(function(i, elem) {
-    var value = '';
+$('h4').slice(2).each(function(i, elem) {
+    let value = '';
     $(elem.parent).contents() // --> Here we are grabbing the parent of the h4 and contents() which grabs comments and text nodes
     .each(function (i, htmlNode) {
         if (htmlNode.type === "text") { // --> For each of these nodes that match "text" as a nodeType we add the data to value
         value += value + htmlNode.data;
         }
     });
-    value = value.trim().replace(/\s\s+/g, " " ) // --> Here we are replacing anything with more than one white space character with a single space using Regex
-    streetAddressArray.push(value.split(",")[0]); // --> pushing the split value on "," and pushing to the array
+    value = value.replace(/\s\s+/g, "" ) // --> Here we are replacing anything with more than one white space character with a single space using Regex
+        .split(' - ').join(',') // --> Splitting on hypen and joining on ","
+        .split('. ').join(',') // --> Resplitting on ". " and rejoining on ","
+        .split(','); // resplitting on ","
+
+    streetAddressArray.push(value[0]); // --> pushing 0 index of value to the empty array.
 }); 
-
-// console.log(streetAddressArray);
+// Write the file
 fs.writeFileSync('streetAddresses.txt', streetAddressArray);
-  // Still need to resolve splitting on the characters of "." and " - ", and the beginning "---------------". 
-
-
-
-
-
-
-
-
-
