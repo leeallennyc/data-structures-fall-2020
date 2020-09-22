@@ -185,7 +185,7 @@ fs.readFile(filePath, (err,data) => {
 
 * I realized after going down the abyss of "callback hell" tutorials, that I needed to get back to a simpler version of what was exactly needed to finish the exercise. 
 * My apprach was first to limit the streetAddress Array to only 10 addresses, so as to not overdue the API rate limits while testing things. 
-* Then to figure out how pass the data of fs.readFile to the async.eachSeries() method.
+* Then to figure out how pass the data of `fs.readFile` to the `async.eachSeries()` method.
 * After considerable energy with experimenting, and wanted to solve the issue of multiple files a directory, I came up with the following for loop to address this:
 
 ```
@@ -211,7 +211,7 @@ var finalOutput =
     };
 ```
 
-* Finally, the last two issues were to read the replace the .txt file extension with .json extension:
+* Finally, the last two issues were to read and replace the `.txt` file extension with `.json` extension:
 * Rather clunky execution here, but it's a series of splitting, popping, pushing, and joining the new extension.
 ```
    setTimeout(callback, 2000);
@@ -229,7 +229,7 @@ var finalOutput =
     // console.log(joinJson);
 ```
 
-* Lastly, the writeFileSync() method takes in that above transformation and stringifies the meetingdata.
+* Lastly, the `writeFileSync()` method takes in that above transformation and stringifies the meetingdata.
 
 ```
     fs.writeFileSync(`${joinJson}`, JSON.stringify(meetingsData));
