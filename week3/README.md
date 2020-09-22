@@ -158,7 +158,7 @@ async.eachSeries(addresses, function(value, callback) {
 * Getting a better understanding of Asyncronous Javascript and API requests/responses was one of the main purposes of this weeks exercises.
 * I began this exercise by looking more into how the file directories and file paths are served and read using Node.js and the FS module. 
 * After I spent a significant amount time trying to understand directories, buffers, streams, and reading about recursive File feeds and Paths, and experimenting with the following code: 
-```
+```js
 // Directory of files
 let directory = "files";
 let dirBuf = Buffer.from(directory);
@@ -188,7 +188,7 @@ fs.readFile(filePath, (err,data) => {
 * Then to figure out how pass the data of `fs.readFile` to the `async.eachSeries()` method.
 * After considerable energy with experimenting, and wanted to solve the issue of multiple files a directory, I came up with the following for loop to address this:
 
-```
+```js
 // Used if we have multiple files in the directory to read
 var filenames = fs.readdirSync(`${__dirname}/files`); 
 // console.log(filenames);
@@ -200,7 +200,7 @@ for (let i = 0; i<filenames.length; i++){
 ```  
  * The next struggle was to understand how to transform the data coming back from the API call, and only pulling out the necessary Lat and Long data. After lots of issues, I came up with the following code to address putting those values in a schema:
 
-```
+```js
 var finalOutput =
     {
         "address": value,
@@ -213,7 +213,7 @@ var finalOutput =
 
 * Finally, the last two issues were to read and replace the `.txt` file extension with `.json` extension:
 * Rather clunky execution here, but it's a series of splitting, popping, pushing, and joining the new extension.
-```
+```js
    setTimeout(callback, 2000);
 }, function() {
     // The below code splits the file extension name on .txt and renames a new file with .json as extension. 
@@ -231,7 +231,7 @@ var finalOutput =
 
 * Lastly, the `writeFileSync()` method takes in that above transformation and stringifies the meetingdata.
 
-```
+```js
     fs.writeFileSync(`${joinJson}`, JSON.stringify(meetingsData));
 ```
 --- 
@@ -240,5 +240,5 @@ var finalOutput =
 * There will always be another blackhole around the corner. Pick your battles wisely. 
 ---
 ### Challenges / Opportunities
-* One of the biggest challenges I'm encountering is not having the time needed to really experiment with each of these principles of Async, Promises, Paths, File Directories, etc. before moving to the next lesson.    
+* One of the biggest challenges I'm encountering is not having the time needed to really experiment with each of these principles of Async, Promises, Paths, File Directories, etc. before moving to the next lesson.     
 
