@@ -54,11 +54,11 @@ for (let i = 0; i<filenames.length; i++){
         // Creating object of finalOuput from body and grabbing Lat and Long data.
         var finalOutput =
         {
-            "address": value,
-            "latLong":{
-                    "lat":tamuGeo.OutputGeocodes[0].OutputGeocode.Latitude,
-                    "lng":tamuGeo.OutputGeocodes[0].OutputGeocode.Longitude
-            }
+            address: value + ", New York, NY",
+            latLong:{
+                    lat: tamuGeo.OutputGeocodes[0].OutputGeocode.Latitude, 
+                    lng: tamuGeo.OutputGeocodes[0].OutputGeocode.Longitude
+                }
         };
         // console.log(finalOutput);
         meetingsData.push(finalOutput);
