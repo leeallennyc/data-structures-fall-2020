@@ -1,6 +1,6 @@
 ##  Week 2 Assignment
 ---
-Assignment 2 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week1/week2_assignment.md)
+Assignment 2 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2_assignment.md)
 
 Weekly Assignment 2, due Tuesday 9/15 at 6:00pm:
 You will parse one of the HTML files you saved last week and log essential data to the console.
@@ -12,7 +12,7 @@ Documentation:
 ### Process
 
 * The approach was to find the parent of the `h4` tags and not grab extra content from all the `td` tags.
-* After getting parents of the `h4` ,the approach I took was to only get back the results that matched the `text` NodeTypes.
+* After getting parents of the `h4` , the approach I took was to only get back the results that matched the `text` NodeTypes.
 * From there I parsed and split the data, and output it to the empty array.
 * After experimenting with the Cheerio method: contents(), I realized that there were hidden characters that might be helpful in parsing. Specifically the Tab keys, extra spaces, and "@" symbol.
 * Looking closely at the syntax, I observed that the addresses which needed to be parsed had a common pattern of UPPERCASE characters followed by `"-"` and `'\n\t\t\t\t\t\t'` + the number of the street "152 West 71st" followed by comma. 

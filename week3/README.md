@@ -1,6 +1,6 @@
 # Weekly Assignment 3
 ---
-Assignment 3 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week1/week3_assignment.md)
+Assignment 3 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week3_assignment.md)
 
 --- 
 ### Process
@@ -34,7 +34,7 @@ fs.readFile(filePath, (err,data) => {
 * I realized after going down the abyss of "callback hell" tutorials, that I needed to get back to a simpler version of what was exactly needed to finish the exercise. 
 * My approach was first to limit the streetAddress Array to only 10 addresses, so as to not overdue the API rate limits while testing things. 
 * Then to figure out how to pass the data of `fs.readFile` to the `async.eachSeries()` method.
-* After considerable energy with experimenting, and wanted to solve the issue of multiple files a directory, I came up with the following for loop to address this:
+* After considerable energy with experimenting, and wanted to solve the issue of multiple files in a directory, I came up with the following for loop to address this:
 
 ```js
 // Used if we have multiple files in the directory to read
