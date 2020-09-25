@@ -1,6 +1,6 @@
 ##  Week 2 Assignment
 ---
-Assignment 2 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2_assignment.md)
+Assignment 2 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2/week2_assignment.md)
 
 Weekly Assignment 2, due Tuesday 9/15 at 6:00pm:
 You will parse one of the HTML files you saved last week and log essential data to the console.

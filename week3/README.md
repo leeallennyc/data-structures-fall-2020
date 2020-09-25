@@ -1,6 +1,6 @@
 # Weekly Assignment 3
 ---
-Assignment 3 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week3_assignment.md)
+Assignment 3 Detailed Description: [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week3/week3_assignment.md)
 
 --- 
 ### Process
