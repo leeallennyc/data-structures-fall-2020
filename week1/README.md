@@ -53,9 +53,8 @@ var htmlPages = [
     'https://parsons.nyc./aa/m09.html',
     'https://parsons.nyc./aa/m10.html',
     ];
-
 ```
-* After creating these arrays, by next goal was to create a function which pulled out each element in the arrays.
+* After creating these arrays, my next goal was to create a function which pulled out each element in the arrays.
  
 ```js
 // Outputs each element in the meetingSuffixes array
