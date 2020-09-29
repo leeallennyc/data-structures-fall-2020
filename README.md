@@ -12,7 +12,7 @@ Documentation and weekly submission for PGDV 5110 Syllabus, Fall 2020.
 | Week 2        | Summary: [Week 2](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week2) Assignment (Express/Cheerio), Parse HTML, + Readings|   
 | Week 3        | Summary: [Week 3](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3) Assignment (GeoServices/Async), dotenv + Readings|  
 | Week 4        | Summary: [Week 4](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week4) Assignment (PostgresSQL Database AWS), + Readings|
-| Week 5        | Summary:          |   
+| Week 5        | Summary: [Week 5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5) Assignment (NoSQL Database and Schema), + Readings|   
 | Week 6        | Summary:          |  
 | Week 7        | Summary:          | 
 | Week 8        | Summary:          |   
