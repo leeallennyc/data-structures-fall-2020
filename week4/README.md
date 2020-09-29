@@ -11,11 +11,11 @@ The purpose of this assignment was to setup a Postgres Relational Database in AW
 #### Step One
 * I began sketching from the place of the User as in: `What is most important thing when searching for a meeting?`
 * I came up with the following questions based on the [html data]('https://parsons.nyc./aa/m06.html') from `https://parsons.nyc./aa/m06.html`
-* ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/images/AWS_RDB_Questions.png?raw=true)
+ ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/images/AWS_RDB_Questions.png?raw=true)
 * After coming up with these questions I decided to use a more "normalized" approach to setting up tables using Lucidchart as there were multiple considerations around the data.
 * The categories fell into `time/availability`, `travel distance`,  `wheelchair access`, `interests`, and `new or returning members/interests`. 
 * My first attempt.
-* ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/images/AWS_schema_sketch.png?raw=true)
+ ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/images/AWS_schema_sketch.png?raw=true)
 * I haven't started to make the entity relations yet, such as one to one, one to many, etc. in the sketch--which is to come in the next iteration. 
 * Questions to consider:
 -Will you use a Normalized Data Model or a Denormalized Data Model? Why?
