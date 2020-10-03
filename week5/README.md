@@ -3,7 +3,7 @@
 Assignment 5 Details: [Week 5](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/week5_assignment.md) 
 
 ## Summary:
-The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/dynamodb/) NoSQL database in AWS, and input our address data for AA meetings html pages.  
+The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/dynamodb/) NoSQL database in AWS, and post data from a process blog into the database.
 --- 
 ### Process
 
@@ -33,4 +33,7 @@ The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/
 * 
 
 ### Additional / Readings for the week
-*
+* 
+Hills, Chapter 5
+[Database as Symbolic Form, Lev Manovich](https://www.semanticscholar.org/paper/Database-as-Symbolic-Form-Manovich/e45079a8931a1c37da99e9be042502f332e6438b) 
+Gitelman, Data Flakes: An Afterword to "Raw Data" Is an Oxymoron
