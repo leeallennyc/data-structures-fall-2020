@@ -11,7 +11,8 @@ The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/
 #### Preparation & Setup
 * Set up a DynamoDB NoSQL database in AWS as illustrated [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/week5_DynamoDB.md). 
 * Our goal was to begin the process of creating a new [DynamoDB](https://aws.amazon.com/dynamodb/) NoSQL database through AWS, and building a schema based on how we might think through the user experience of searching and publishing a journal/blog entry.
-
+* Here I also chose to set up a Local Secondary Index on "Tag"
+* ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/Local_Secondary_Index.png?raw=true)
 #### Step One
 * Using a similar framework to last week, I began sketching first: 
 * I came up with the following questions based on what might need to be retrieved and accessed from a journal/blog entry.
@@ -24,40 +25,50 @@ The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/
 #### Step Two
 * In Step two we created a class of blogEntries as our datasource to prepare for the DynamoDB. We pushed each BlogEntry into the an empty array, which was then sent to the DB. 
 
-* Starter Code:
+* class BlogEntry:
 ```js
 var blogEntries = [];
 
 class BlogEntry {
-  constructor(primaryKey, date, entry, happy, iate) {
-    this.pk = {};
-    this.pk.N = primaryKey.toString();
-    this.date = {}; 
-    this.date.S = new Date(date).toDateString();
-    this.entry = {};
-    this.entry.S = entry;
-    this.happy = {};
-    this.happy.BOOL = happy; 
-    if (iate != null) {
-      this.iate = {};
-      this.iate.SS = iate; 
+    constructor(primaryKey, sortKey, title, tag, dayOfEntry, entry, wordcount, uniqueId, productive, wroteinJournal) {
+        this.user_id = {};
+        this.user_id.S = primaryKey.toString();
+        this.entry_date_id = {};
+        this.entry_date_id.S = sortKey.toString();
+        this.title = {};
+        this.title.S = title.toString();
+        this.tag = {};
+        this.tag.S = tag.toString();
+        this.dayOfEntry = {};
+        this.dayOfEntry.S = dayOfEntry.toString();
+        this.entry = {};
+        this.entry.S = entry.toString();
+        this.wordcount = {};
+        this.wordcount.N = wordcount.toString();
+        this.unique_id = {}
+        this.unique_id.S = uniqueId.toString();
+        this.productive = {};
+        this.productive.BOOL = productive;
+        if (wroteinJournal != null) {
+            this.wroteinJournal = {};
+            this.wroteinJournal.SS = wroteinJournal;
+        }
+        // this.month = {};
+        // this.month.N = new Date(dayOfEntry).getMonth().toString();
     }
-    this.month = {};
-    this.month.N = new Date(date).getMonth().toString();
-  }
 }
 
-blogEntries.push(new BlogEntry(0, 'August 28 2019', "Yay, first day of class!", true, ["Cheez-Its", "M&Ms"]));
-blogEntries.push(new BlogEntry(1, 'October 31, 2015', "I piloted my first solo flight!", true, ["pancakes"]));
-blogEntries.push(new BlogEntry(2, 8675309, "867-5309?", false));
-blogEntries.push(new BlogEntry(3, 'September 25, 2019', "I taught my favorite students.", true, ["peas", "carrots"]));
+    blogEntries.push(new BlogEntry(userID[7], nycTimeStamp, 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
+    blogEntries.push(new BlogEntry(userID[11], nycTimeStamp, 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
+    blogEntries.push(new BlogEntry(userID[5], nycTimeStamp, 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
+    blogEntries.push(new BlogEntry(userID[8], nycTimeStamp, 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
 
 console.log(blogEntries);
 ```
 
 #### Step Three
 * Populating the Database with the blog/journal entries that we created.
-* Starter code:
+* Starter code: I did not get a chance to finish this out with the `async.eachSeries()`` for time reasons.
 ``` js
 var AWS = require('aws-sdk');
 AWS.config = new AWS.Config();
@@ -74,7 +85,6 @@ dynamodb.putItem(params, function (err, data) {
   else     console.log(data);           // successful response
 });
 ```
-
 ### Observations & Learnings
 * Learning about Global Secondary Indexes and Local Secondary Indexes to help with the "Access patterns" of the DynamoDB. Ideas of Throttling due to "hot keys", and how to set RCU / WCU capacity on global indexes. 
 * There is no extra cost to using LSIs but there is a large cost to using GSIs (especially when the table gets large). With this in mind, the LSIs have to be defined at Table creation time. 
@@ -85,10 +95,11 @@ dynamodb.putItem(params, function (err, data) {
 ---
 ### Challenges / Opportunities
 * One of the challenges that I continually come across is how many different approaches there are to do the same thing.
-* An opportunity for the next exercise would to be scale back the problem to understand what is the minimal example that I can produce before expanding my code and complexity of the problem. 
+* An opportunity for the next exercise would to be scale back the problem to understand what is the minimal example that I can produce before expanding my code and complexity of the problem.
+* Challenge of using the `async.eachSeries()` method to finalize the assignment, as I spent the majority of my time on learning about `uuidv1()`, Moment.js, and setup -- will keep working toward finishing this. 
 
 ### Additional / Readings for the week
 * 
-Hills, Chapter 5
-[Database as Symbolic Form, Lev Manovich](https://www.semanticscholar.org/paper/Database-as-Symbolic-Form-Manovich/e45079a8931a1c37da99e9be042502f332e6438b) 
-Gitelman, Data Flakes: An Afterword to "Raw Data" Is an Oxymoron
+* Hills, Chapter 5
+* [Database as Symbolic Form, Lev Manovich](https://www.semanticscholar.org/paper/Database-as-Symbolic-Form-Manovich/e45079a8931a1c37da99e9be042502f332e6438b) 
+* Gitelman, Data Flakes: An Afterword to "Raw Data" Is an Oxymoron
