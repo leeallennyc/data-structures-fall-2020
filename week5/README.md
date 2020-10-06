@@ -77,6 +77,7 @@ dynamodb.putItem(params, function (err, data) {
 
 ### Observations & Learnings
 * Learning about Global Secondary Indexes and Local Secondary Indexes to help with the "Access patterns" of the DynamoDB. Ideas of Throttling due to "hot keys", and how to set RCU / WCU capacity on global indexes. 
+* There is no extra cost to using LSIs but there is a large cost to using GSIs (especially when the table gets large). With this in mind, the LSIs have to be defined at Table creation time. 
 * It's most helpful to understand the quesitons and use cases of the final user before ever touching the schema design. 
 * I learned about [moment.js](https://momentjs.com/) and [moment.js/timezone](https://momentjs.com/timezone/).
 * Also how bring in and use [uuidV1](https://www.npmjs.com/package/uuid) for creating unique identifiers.
