@@ -68,7 +68,7 @@ console.log(blogEntries);
 
 #### Step Three
 * Populating the Database with the blog/journal entries that we created.
-* Starter code: I did not get a chance to finish this out with the `async.eachSeries()`` for time reasons.
+* Starter code: I did not get a chance to finish this out with the `async.eachSeries()` for time reasons.
 ``` js
 var AWS = require('aws-sdk');
 AWS.config = new AWS.Config();
