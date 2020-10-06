@@ -9,10 +9,10 @@ The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/
 ### Process
 
 #### Preparation & Setup
-* Set up a DynamoDB NoSQL database in AWS as illustrated [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/week5_DynamoDB.md). 
-* Our goal was to begin the process of creating a new [DynamoDB](https://aws.amazon.com/dynamodb/) NoSQL database through AWS, and building a schema based on how we might think through the user experience of searching and publishing a journal/blog entry.
+* Set up a DynamoDB NoSQL database in AWS as illustrated [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/week5_assignment.md). 
+* Our goal was to begin the process of creating a new [DynamoDB](https://aws.amazon.com/dynamodb/) NoSQL database through AWS, and build a schema based on how we might think through the user experience of searching and publishing a journal/blog entry.
 * Here I also chose to set up a Local Secondary Index on "Tag"
-* ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/Local_Secondary_Index.png?raw=true)
+ ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/Local_Secondary_Index.png?raw=true)
 #### Step One
 * Using a similar framework to last week, I began sketching first: 
 * I came up with the following questions based on what might need to be retrieved and accessed from a journal/blog entry.
@@ -23,7 +23,7 @@ The purpose of this assignment was to setup a [DynamoDB](https://aws.amazon.com/
  ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/AWS_DynamoDB_schema_sketch.png?raw=true)
 
 #### Step Two
-* In Step two we created a class of blogEntries as our datasource to prepare for the DynamoDB. We pushed each BlogEntry into the an empty array, which was then sent to the DB. 
+* In Step two we created a class of blogEntries as our datasource to prepare for DynamoDB. We pushed each BlogEntry into the an empty array, which was then sent to the DB. 
 
 * class BlogEntry:
 ```js
@@ -68,7 +68,7 @@ console.log(blogEntries);
 
 #### Step Three
 * Populating the Database with the blog/journal entries that we created.
-* Starter code: I did not get a chance to finish this out with the `async.eachSeries()` for time reasons.
+* Starter code: I did not get a chance to finish this out with the `async.eachSeries()` for time reasons. Manual pushes of the entries.
 ``` js
 var AWS = require('aws-sdk');
 AWS.config = new AWS.Config();
@@ -99,7 +99,6 @@ dynamodb.putItem(params, function (err, data) {
 * Challenge of using the `async.eachSeries()` method to finalize the assignment, as I spent the majority of my time on learning about `uuidv1()`, Moment.js, and setup -- will keep working toward finishing this. 
 
 ### Additional / Readings for the week
-* 
 * Hills, Chapter 5
 * [Database as Symbolic Form, Lev Manovich](https://www.semanticscholar.org/paper/Database-as-Symbolic-Form-Manovich/e45079a8931a1c37da99e9be042502f332e6438b) 
 * Gitelman, Data Flakes: An Afterword to "Raw Data" Is an Oxymoron
