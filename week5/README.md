@@ -85,6 +85,10 @@ dynamodb.putItem(params, function (err, data) {
   else     console.log(data);           // successful response
 });
 ```
+
+* Result of manual push.
+![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/AWS_DynamoDb_Table.png?raw=true)
+
 ### Observations & Learnings
 * Learning about Global Secondary Indexes and Local Secondary Indexes to help with the "Access patterns" of the DynamoDB. Ideas of Throttling due to "hot keys", and how to set RCU / WCU capacity on global indexes. 
 * There is no extra cost to using LSIs but there is a large cost to using GSIs (especially when the table gets large). With this in mind, the LSIs have to be defined at Table creation time. 

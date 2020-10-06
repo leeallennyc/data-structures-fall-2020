@@ -75,7 +75,7 @@ var params = {};
  
 // async.eachSeries(blogEntries, function(value, callback){});
  
-params.Item = blogEntries[0];
+params.Item = blogEntries[2];
 params.TableName = "processblog";
 
 dynamodb.putItem(params, function (err, data) {
