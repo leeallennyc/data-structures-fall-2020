@@ -68,26 +68,41 @@ console.log(blogEntries);
 
 #### Step Three
 * Populating the Database with the blog/journal entries that we created.
-* Starter code: I did not get a chance to finish this out with the `async.eachSeries()` for time reasons. Manual pushes of the entries.
+* Used the `async.eachSeries()`
 ``` js
+// Setup AWS sdk and config region
 var AWS = require('aws-sdk');
 AWS.config = new AWS.Config();
 AWS.config.region = "us-east-1";
-
 var dynamodb = new AWS.DynamoDB();
 
-var params = {};
-params.Item = blogEntries[0]; 
-params.TableName = "processblog";
-
-dynamodb.putItem(params, function (err, data) {
-  if (err) console.log(err, err.stack); // an error occurred
-  else     console.log(data);           // successful response
+// Asynchronously loop through each blogEntry
+async.eachSeries(blogEntries, function(value, callback){
+    let params = {
+        Item: value,
+        TableName:'processblog'
+        };
+    // Put each each item in DynamoDB asynchronously  
+    dynamodb.putItem(params, function (err, data) {
+      if (err) console.log(err, err.stack); // an error occurred
+      else     console.log(data);           // successful response
+    });
+    setTimeout(callback, 2000); // wait 2 seconds for each item
+    // console.log(params);
+    }, function(err) {
+    if (err) {
+    console.log('unable to create entry');
+    } else {
+    console.log('All entries created');
+    };
 });
 ```
 
-* Result of manual push.
+* Result of first attempt.
 ![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/AWS_DynamoDb_Table.png?raw=true)
+
+* Result with duplicates.
+![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/images/AWS_duplicates.png?raw=true)
 
 ### Observations & Learnings
 * Learning about Global Secondary Indexes and Local Secondary Indexes to help with the "Access patterns" of the DynamoDB. Ideas of Throttling due to "hot keys", and how to set RCU / WCU capacity on global indexes. 
@@ -95,12 +110,13 @@ dynamodb.putItem(params, function (err, data) {
 * It's most helpful to understand the quesitons and use cases of the final user before ever touching the schema design. 
 * I learned about [moment.js](https://momentjs.com/) and [moment.js/timezone](https://momentjs.com/timezone/).
 * Also how bring in and use [uuidV1](https://www.npmjs.com/package/uuid) for creating unique identifiers.
+* Having duplicate entries in the DB because of the unique sort key combination with `timestamp` and `unique_id`
 
 ---
 ### Challenges / Opportunities
 * One of the challenges that I continually come across is how many different approaches there are to do the same thing.
 * An opportunity for the next exercise would to be scale back the problem to understand what is the minimal example that I can produce before expanding my code and complexity of the problem.
-* Challenge of using the `async.eachSeries()` method to finalize the assignment, as I spent the majority of my time on learning about `uuidv1()`, Moment.js, and setup -- will keep working toward finishing this. 
+* Challenge with duplicate entries from sort key combination, also using the `async.eachSeries()` method to finalize the assignment was more difficult than expected, as I spent the majority of my time on learning about `uuidv1()`, Moment.js, and setup. 
 
 ### Additional / Readings for the week
 * Hills, Chapter 5

@@ -8,18 +8,18 @@ let nycTimeStamp = moment().tz("America/New_York").format('MMMM Do YYYY, h:mm:ss
 
 // Creating User Id with Month number as suffix
 let userID = [
-    'LK_01', // Jan Entry for "LK"
+    'LK_01', // Jan Entries for user_Id "LK"
     'LK_02', 
     'LK_03',
     'LK_04',
-    'LK_05', // May Entry for "LK"
+    'LK_05', // May Entries for user_Id "LK"
     'LK_06',
     'LK_07',
     'LK_08', 
     'LK_09',
     'LK_10',
     'LK_11', 
-    'LK_12'  // Dec Entry for "LK"
+    'LK_12'  // Dec Entries for user_Id "LK"
     ];
 
 var blogEntries = [];
@@ -51,34 +51,38 @@ class BlogEntry {
             this.wroteinJournal = {};
             this.wroteinJournal.SS = wroteinJournal;
         }
-        // this.month = {};
-        // this.month.N = new Date(dayOfEntry).getMonth().toString();
     }
 }
+// Push Blog entries to empty array
+blogEntries.push(new BlogEntry(userID[7], nycTimeStamp + uuidv1(), 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
+blogEntries.push(new BlogEntry(userID[11], nycTimeStamp + uuidv1(), 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
+blogEntries.push(new BlogEntry(userID[5], nycTimeStamp + uuidv1(), 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
+blogEntries.push(new BlogEntry(userID[8], nycTimeStamp + uuidv1(), 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
+// console.log(blogEntries);
 
-// console.log(BlogEntry);
-
-    blogEntries.push(new BlogEntry(userID[7], nycTimeStamp, 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
-    blogEntries.push(new BlogEntry(userID[11], nycTimeStamp, 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
-    blogEntries.push(new BlogEntry(userID[5], nycTimeStamp, 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
-    blogEntries.push(new BlogEntry(userID[8], nycTimeStamp, 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
-    
-    console.log(blogEntries);
-
+// Setup AWS sdk and config region
 var AWS = require('aws-sdk');
 AWS.config = new AWS.Config();
 AWS.config.region = "us-east-1";
-
 var dynamodb = new AWS.DynamoDB();
 
-var params = {};
- 
-// async.eachSeries(blogEntries, function(value, callback){});
- 
-params.Item = blogEntries[2];
-params.TableName = "processblog";
-
-dynamodb.putItem(params, function (err, data) {
-  if (err) console.log(err, err.stack); // an error occurred
-  else     console.log(data);           // successful response
+// Asynchronously loop through each blogEntry
+async.eachSeries(blogEntries, function(value, callback){
+    let params = {
+        Item: value,
+        TableName:'processblog'
+        };
+    // Put each each item in DynamoDB asynchronously  
+    dynamodb.putItem(params, function (err, data) {
+      if (err) console.log(err, err.stack); // an error occurred
+      else     console.log(data);           // successful response
+    });
+    setTimeout(callback, 2000); // wait 2 seconds for each item
+    // console.log(params);
+    }, function(err) {
+    if (err) {
+    console.log('unable to create entry');
+    } else {
+    console.log('All entries created');
+    };
 });
