@@ -53,17 +53,14 @@ class BlogEntry {
             this.wroteinJournal = {};
             this.wroteinJournal.SS = wroteinJournal;
         }
-        // this.month = {};
-        // this.month.N = new Date(dayOfEntry).getMonth().toString();
     }
 }
-
-    blogEntries.push(new BlogEntry(userID[7], nycTimeStamp, 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
-    blogEntries.push(new BlogEntry(userID[11], nycTimeStamp, 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
-    blogEntries.push(new BlogEntry(userID[5], nycTimeStamp, 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
-    blogEntries.push(new BlogEntry(userID[8], nycTimeStamp, 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
-
-console.log(blogEntries);
+// Push Blog entries to empty array
+blogEntries.push(new BlogEntry(userID[7], nycTimeStamp + uuidv1(), 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
+blogEntries.push(new BlogEntry(userID[11], nycTimeStamp + uuidv1(), 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
+blogEntries.push(new BlogEntry(userID[5], nycTimeStamp + uuidv1(), 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
+blogEntries.push(new BlogEntry(userID[8], nycTimeStamp + uuidv1(), 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
+// console.log(blogEntries);
 ```
 
 #### Step Three
