@@ -54,10 +54,22 @@ class BlogEntry {
     }
 }
 // Push Blog entries to empty array
-blogEntries.push(new BlogEntry(userID[7], nycTimeStamp + uuidv1(), 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
-blogEntries.push(new BlogEntry(userID[11], nycTimeStamp + uuidv1(), 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
-blogEntries.push(new BlogEntry(userID[5], nycTimeStamp + uuidv1(), 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
-blogEntries.push(new BlogEntry(userID[8], nycTimeStamp + uuidv1(), 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
+// blogEntries.push(new BlogEntry(userID[7], nycTimeStamp, 'Ideas for Co.', 'Business Processes', 'August 28 2019','The first thing...', 200, uuidv1(), true, ["Summer", "2019"]));
+// blogEntries.push(new BlogEntry(userID[11], nycTimeStamp, 'Holons', 'Integral Theory', 'December 20 2019','Idea of a whole as part...', 340, uuidv1(), true, ["Winter", "2019"]));
+// blogEntries.push(new BlogEntry(userID[5], nycTimeStamp, 'Ecosystems', 'Organizational Dynamics', 'June 14 2020', 'Business Species...', 150, uuidv1(), true, ["Summer", "2020"]));
+// blogEntries.push(new BlogEntry(userID[8], nycTimeStamp, 'Macro Vision','Self-Development', 'September 20 2020', 'The timeline for..', 600, uuidv1(), true, ["Fall", "2020"]));
+
+// blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Amsterdam Art Show.', 'Art Exhibitions', 'October 10 2020','GEM-Z Exhibition...', 300, uuidv1(), true, ["Spring", "2021"]));
+// blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Lenses', 'Business Processes', 'October 8 2020','Putting Mineral Glasses Lenses...', 340, uuidv1(), true, ["Winter", "2020"]));
+// blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Vision Series', 'Self-Development', 'October 5 2020', 'Wrapping up the Vision Series', 500, uuidv1(), true, ["Winter", "2020"]));
+// blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Tomoe River FP','Product Development', 'October 11 2020', 'Dear Ms.Chensa, ...', 500, uuidv1(), true, ["Spring", "2021"]));
+
+blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Midori Sample.','Product Development', 'October 12 2020','Sample sent from Japan...', 300, uuidv1(), true, ["Spring", "2021"]));
+blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Run', 'Self-Development', 'October 12 2020','2.5 Miles around...', 460, uuidv1(), true, ["Winter", "2020"]));
+blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Germany','Product Development', 'October 13 2020', 'Send address to ....', 700, uuidv1(), true, ["Winter", "2020"]));
+// blogEntries.push(new BlogEntry(userID[09], nycTimeStamp + uuidv1(), 'Tomoe Rivr FP','Product Development', 'October 13 2020', 'Dear Ms.Chensa, ...', 500, uuidv1(), true, ["Spring", "2021"]));
+
+
 // console.log(blogEntries);
 
 // Setup AWS sdk and config region

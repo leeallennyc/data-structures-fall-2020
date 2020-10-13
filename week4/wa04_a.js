@@ -4,6 +4,7 @@ const { Client } = require('pg');
 const dotenv = require('dotenv');
 dotenv.config();
 
+
 // AWS RDS POSTGRESQL INSTANCE
 var db_credentials = new Object();
 db_credentials.user =  'lee';
