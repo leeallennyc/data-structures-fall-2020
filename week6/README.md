@@ -42,6 +42,10 @@ address                              lat         long
 207 West 96th Street, New York, NY   40.7945161  -73.9710419
 ```
 
+*Image:
+
+<img src = "https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week6/images/SQL_query.png">
+
 #### Preparation & Setup for NOSQL query -  File is [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week6/wa06_NOSQL.js)
 * In this example for NoSQL, we are querying the DynamoDB database which we set up in [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5).
 * In order to prepare, we have added additional entries into the database:
@@ -78,10 +82,6 @@ var params = {
 };
 
 ```
-
-*Image:
-
-<img src = "https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6/images/SQL_query.png">
 
 
 #### Output: 
@@ -154,7 +154,7 @@ Query succeeded.
 ```
 * Image:
 
-<img src = "https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6/images/NOSQL_query.png">
+<img src = "https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week6/images/NOSQL_query.png">
 
 
 ### Observations & Learnings
