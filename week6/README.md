@@ -79,6 +79,11 @@ var params = {
 
 ```
 
+*Image:
+
+<img src = "https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6/images/SQL_query.png">
+
+
 #### Output: 
 
 * Here we are searching on Journal Entries by user LK, which had the day of the entry created in August, but the entries were submitted to the database on October 6th.
@@ -147,6 +152,10 @@ Query succeeded.
   title: { S: 'Ideas for Co.' } }
 
 ```
+* Image:
+
+<img src = "https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6/images/NOSQL_query.png">
+
 
 ### Observations & Learnings
 * I will need to add many more tables and also find a way to get rid of duplicate addresses, either using SQL or hardcoded in the JSON return.
