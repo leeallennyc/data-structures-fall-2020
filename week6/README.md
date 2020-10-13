@@ -10,7 +10,7 @@ The purpose of this assignment was to retrieve data from our SQL Database & NoSQ
 
 ### Process
 
-#### Preparation & Setup for SQL query
+#### Preparation & Setup for SQL query - File is [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week6/wa06_SQL.js)
 * Before I began working on the SQL data retrieval, I first cleaned up the `address.json` file from week3, deleted the table from week4, and parsed in the whole file in using `var addressesForDb = JSON.parse(fs.readFileSync('../week3/data/files/streetAddresses.json'));`
 * After that I set up the credential for AWS and created a `.env` file to pass in for querying.
 * Also included the console.table, and dotenv imports. 
@@ -42,7 +42,7 @@ address                              lat         long
 207 West 96th Street, New York, NY   40.7945161  -73.9710419
 ```
 
-#### Preparation & Setup for NOSQL query
+#### Preparation & Setup for NOSQL query -  File is [Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week6/wa06_NOSQL.js)
 * In this example for NoSQL, we are querying the DynamoDB database which we set up in [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5).
 * In order to prepare, we have added additional entries into the database:
 
