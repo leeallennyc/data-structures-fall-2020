@@ -9,13 +9,15 @@ The purpose of this assignment was to finish parsing and cleaning the rest of th
 --- 
 
 ### Process
-* We worked in small groups to think about the most efficient way to parse and clean the information for all zones. Important factors that we considered where `meeting_address`, `meeting_times`, `meeting_name`, `wheelchair_accessiblity`, `interest_group`
+* We worked in a group of three people to think about the most efficient way to parse and clean the information for all zones. 
+* Important factors that we considered where `meeting_address`, `meeting_times`, `meeting_name`, `wheelchair_accessiblity`, `interest_group`, addition to others.
 
 #### Step One 
-* Looking back at code from [week 2](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2/data/wa02.js), first tried to bring in all the html files from all weeks.
+* Looking back at the code from [week 2](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week2/data/wa02.js), my first attempt was to bring in all the files from all weeks.
 * This approach produced a number of problems, so I decided to manually check for the exceptions of each week to better understand where the address errors were happening. 
-* I had a number of problems with regular expressions after replacing all the white space, so decided to go through each of the errors and use the `.replace()` and `.split()` methods.
-* After this completed I made a note to move onto the next step, and also come back to this to later refactor and make the code more efficient with looping. 
+* My regular expression knowledge was limited after replacing all the white space, so decided to go through each of the errors and use the `.replace()` and `.split()` methods.
+* Upon completing this I made a note to move onto the next step, and also come back to this later and refactor the code for more efficiency using an async loop.
+* This was the outcome for getting the address data for all ten zones. The problem here currently is that each file is loaded in manually. 
 
 ```js
   value = value.replace(/\s\s+/g, "" )// --> Here we are replacing anything with more than one white space character with a single space using Regex
@@ -57,12 +59,12 @@ The purpose of this assignment was to finish parsing and cleaning the rest of th
 #### Step Two
 * After getting all the `address` information from all ten zones, the next step was to retrieve all the other important data that we will end up querying on for the final assignment. 
 * Our group each came back with some insights related to this next step.
-* 
 
 
 
 ### Observations & Learnings
 * 
+
 
 ---
 ### Challenges / Opportunities
