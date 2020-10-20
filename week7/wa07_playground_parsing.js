@@ -10,7 +10,7 @@ var fs = require('fs');
 var cheerio = require('cheerio');
 
 //  load the m06.txt file into a variable, 'content'
-var content = fs.readFileSync('data/m10.html', 'utf8');
+var content = fs.readFileSync('data/html_txt/m06.html', 'utf8');
 
 //  load `content` into a cheerio object
 var $ = cheerio.load(content);
@@ -74,7 +74,7 @@ var locationList = [];
     });
 
 // console.log(locationList);
-fs.writeFileSync('locationList_zone10.json', JSON.stringify(locationList));
+fs.writeFileSync('data/locationLists/locationList_zone06.json', JSON.stringify(locationList));
 
 var timeList = [];
 
@@ -138,4 +138,4 @@ var timeList = [];
         });
     });
 // console.log(timeList);
-fs.writeFileSync('timeList_zone010.json', JSON.stringify(timeList));
+fs.writeFileSync('data/timeList/timeList_zone06.json', JSON.stringify(timeList));
