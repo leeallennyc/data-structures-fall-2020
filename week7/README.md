@@ -17,44 +17,17 @@ The purpose of this assignment was to finish parsing and cleaning the rest of th
 * This approach produced a number of problems, so I decided to manually check for the exceptions of each week to better understand where the address errors were happening. 
 * My regular expression knowledge was limited after replacing all the white space, so decided to go through each of the errors and use the `.replace()` and `.split()` methods.
 * Upon completing this I made a note to move onto the next step, and also come back to this later and refactor the code for more efficiency using an async loop.
-* This was the outcome for getting the address data for all ten zones. The problem here currently is that each file is loaded in manually. 
+* This was the outcome for getting the address data for all ten zones. The problem here currently is that each file is loaded in manually, and it's a mess. 
 
 ```js
   value = value.replace(/\s\s+/g, "" )// --> Here we are replacing anything with more than one white space character with a single space using Regex
-        .replace('W.', 'West')
-        .replace(' W ', 'West')
-        .replace('astr', 'ast')
-        .replace('rert', 'reet')
-        .replace('208West13th', '208 West 13th')
-        .replace('St.', 'Street')
-        .replace(' East Union Square', 'Union Square East')
-        .replace('10U', '10 U')
-        .replace('80 Street', '80 Saint')
-        .replace('206-208', '206')
-        .replace('St Rm 306', 'Street')
-        .replace('EAST', 'East')
-        .replace('STREET', 'Street')
-        .replace('west', 'West')
-        .replace('street', 'Street')
-        .replace(' E ', 'East')
-        .replace(' E. ', 'East')
-        .replace('122East37TH', '122 East 37th')
-        .replace('Church of the Good Shepard', '543 Main Street')
-        .replace('337East74th', '337 East 74th')
-        .replace('331East70th St', '331 East 70th Street')
-        .replace('521West126th St', '521 West 126th Street')
-        .replace('58-66', '58')
-        .replace('West165th', 'West 165th')
-        .split(' @ ').join(',')
-        .split(' - ').join(',')
-        .split('- ').join(',')
-        .split('-').join(',')
-        .split('. ').join(',')
-        .split(' (').join(',')
-        .split('(').join(',')
-        .split(')').join(',') 
-        .split(' ,').join(',')
-        .split(','); // resplitting on ","
+        .replace('W.', 'West').replace(' W ', 'West').replace('astr', 'ast').replace('west', 'West').replace('EAST', 'East').replace(' E. ', 'East').replace(' E ', 'East').replace('West165th', 'West 165th')
+        .replace('rert', 'reet').replace('St.', 'Street').replace('STREET', 'Street').replace('street', 'Street').replace('St Rm 306', 'Street')
+        .replace('208West13th', '208 West 13th').replace(' East Union Square', 'Union Square East').replace('10U', '10 U')
+        .replace('80 Street', '80 Saint').replace('206-208', '206').replace('122East37TH', '122 East 37th').replace('Church of the Good Shepard', '543 Main Street')
+        .replace('337East74th', '337 East 74th').replace('331East70th St', '331 East 70th Street').replace('521West126th St', '521 West 126th Street').replace('58-66', '58')
+        .split(' @ ').join(',').split(' - ').join(',').split('- ').join(',').split('-').join(',').split('. ').join(',').split(' (').join(',').split('(').join(',')
+        .split(')').join(',').split(' ,').join(',').split(',');
 ```
 #### Step Two
 * After getting all the `address` information from all ten zones, the next step was to retrieve all the other important data that we will end up querying on for the final assignment. 
