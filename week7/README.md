@@ -171,9 +171,14 @@ fs.writeFileSync('timeList_zone010.json', JSON.stringify(timeList));
 
 ```
 #### Step Three
-* We still had a few parsing errors at this stage, mostly in the locationList files for each Zone. 
-* Two "tables" were created for the meetings: `Location List` and `Time List`.
-* Next is to integrate the Lat and Long from the Geoservices API and incorporate that finish all JSON for all 10 zones. 
+* We still had a few parsing errors at this stage, mostly in the locationList files for each Zone. Will need to go back and finish all the cleaning.  
+* Two JSON files were created for different tables: `Location List` and `Time List`. They were put in these folders: [Location List](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7/data/locationLists), [Time List](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7/data/timeList)
+* JSON files were then completed for all [10 Zones](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7/data/Addresses_Lat_Long) using the code from week 3.
+* I ended up feeding each one of the files into the week3 [code](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week3/data/wa03.js) and placed them in the [completed_addresses folder](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3/data/complete_addresses)
+
+
+#### Step Four (to come)
+* Preparing all the JSON for different tables, and loading the JSON files into our Postgres DB using SQL.
 
 
 
