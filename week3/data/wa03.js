@@ -24,9 +24,12 @@ let meetingsData = [];
 
 // Used if we have multiple files in the directory to read
 var filenames = fs.readdirSync(`${__dirname}/files`); 
-console.log(filenames);
+// console.log(filenames);
 
-// This forloop goes through each filename in the files directory and reads each file and return its contents.
+// ** IMPORTANT
+// This forloop goes through each filename in the files directory and reads each file and puts the new GEO coordinates file in the Complete_Addresses Folder.
+// ** IMPORTANT -- Manual Work Here!!!! ONLY ONE FILE is FED into The "FILES" folder at a time. After the JSON file is created with the GEO Coordinate in the "COMPLETE ADDRESSES" Folder, MANUALLY MOVE THE FILE from the Files directory out of the files directory
+// and place the next one in. Make sure there is only ONE FILE in the 'FILES' folder at any given time, otherwise it will concatenate ALL the files in the Files directory when you run it. Need to come back to this to fix. 
 for (let i = 0; i<filenames.length; i++){
     var addresses = JSON.parse(fs.readFileSync(`${__dirname}/files/${filenames[i]}`));
     console.log(addresses)
@@ -61,23 +64,23 @@ for (let i = 0; i<filenames.length; i++){
                     lng: tamuGeo.OutputGeocodes[0].OutputGeocode.Longitude
                 }
         };
-        console.log(finalOutput);
+        // console.log(finalOutput);
         meetingsData.push(finalOutput);
     });
     // sleep for a couple seconds before making the next request 
     setTimeout(callback, 2000);
 }, function() {
     // The below code splits the file extension name on .txt and renames a new file with .json as extension. 
-    var templateString =  `${__dirname}/files/${filenames[i]}`
-    console.log(templateString);
+    var templateString = `${__dirname}/complete_addresses/${filenames[i]}`
+    // console.log(templateString);
     var splitTxt = templateString.split(".");
-    console.log(splitTxt);
+    // console.log(splitTxt);
     var removeTxt = splitTxt.pop();
-    console.log(splitTxt);
+    // console.log(splitTxt);
     var pushJson = splitTxt.push('.json');
-    console.log(splitTxt);
+    // console.log(splitTxt);
     var joinJson = splitTxt.join('');
-    console.log(joinJson);
+    // console.log(joinJson);
     
 //     // writes the new filename and stringifies meetingData.
     fs.writeFileSync(`${joinJson}`, JSON.stringify(meetingsData));
