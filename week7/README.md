@@ -31,7 +31,7 @@ The purpose of this assignment was to finish parsing and cleaning the rest of th
 ```
 #### Step Two
 * After getting all the `address` information from all ten zones, the next step was to retrieve all the other important data that we will end up querying on for the final assignment. 
-* Our group each came back with some insights related to this next step. Zhibang contributed the base code and we adapted it with the exceptions. The code is still difficult to read so we are considering creating a separate JSON file for all exceptions.
+* Our group each came back with some insights related to this next step. [Zhibang Jiang](https://github.com/gitacoco/data-structures/blob/master/Weekly_assign_07/wa07_Parse.js) contributed the base code of `wa07_Parse.js` and we adapted it with the exceptions. The code is still difficult to read so we are considering creating a separate JSON file for all exceptions.
 * Also the challenge is here is that each file is still created manually. We will need to fix the exceptions and also create a directory to read the files from and into. 
 ```js
 var fs = require('fs');
