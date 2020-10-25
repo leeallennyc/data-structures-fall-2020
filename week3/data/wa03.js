@@ -26,10 +26,11 @@ let meetingsData = [];
 var filenames = fs.readdirSync(`${__dirname}/files`); 
 // console.log(filenames);
 
-// ** IMPORTANT
+// ** IMPORTANT ** 
 // This forloop goes through each filename in the files directory and reads each file and puts the new GEO coordinates file in the Complete_Addresses Folder.
-// ** IMPORTANT -- Manual Work Here!!!! ONLY ONE FILE is FED into The "FILES" folder at a time. After the JSON file is created with the GEO Coordinate in the "COMPLETE ADDRESSES" Folder, MANUALLY MOVE THE FILE from the Files directory out of the files directory
-// and place the next one in. Make sure there is only ONE FILE in the 'FILES' folder at any given time, otherwise it will concatenate ALL the files in the Files directory when you run it. Need to come back to this to fix. 
+// ** IMPORTANT -- Manual Work Here!!!! ONLY ONE FILE is FED into The "FILES" folder at a time from the UNTRANSFORMED_ADDRESSES Folder. After the JSON file is created with the GEO Coordinate it will automatically appear in the "COMPLETE ADDRESSES" Folder.
+// It's currently necessary to MANUALLY MOVE THE FILE from the Files directory out of the files directory back into the UNTRANSFORMED_ADDRESSES directory after it is parsed.
+// Make sure there is only ONE FILE in the 'FILES' folder at any given time, otherwise it will concatenate ALL the files in the Files directory when you run it. Need to come back to this to fix it later. 
 for (let i = 0; i<filenames.length; i++){
     var addresses = JSON.parse(fs.readFileSync(`${__dirname}/files/${filenames[i]}`));
     console.log(addresses)
