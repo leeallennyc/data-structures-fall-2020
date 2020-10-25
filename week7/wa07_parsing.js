@@ -3,19 +3,54 @@
 ///////////////////////////////////////////
 
 // Found Here: https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week7/week7_assignment.md
-
 // npm install cheerio
 
-var fs = require('fs');
-var cheerio = require('cheerio');
+const fs = require('fs'),
+      querystring = require('querystring'),
+      request = require('request'),
+      async = require('async'),
+      dotenv = require('dotenv'),
+      path = require('path'),
+      cheerio = require('cheerio')
 
 //  load the m06.txt file into a variable, 'content'
-var content = fs.readFileSync('data/m10.html', 'utf8');
+var content = fs.readFileSync('data/html/m01.html', 'utf8');
 
 //  load `content` into a cheerio object
 var $ = cheerio.load(content);
-
+   
+let latLongJSON;
+let newLocationData = [];
 var locationList = [];
+
+// Read in street address and lat long data in synchronously
+let latLongData = fs.readFileSync("data/Addresses_Lat_Long_json/streetAddresses_zone01.json", "utf8") 
+        latLongJSON = JSON.parse(latLongData);
+        // console.log(output);
+        
+            // for Each loop over the latLong JSON data
+            latLongJSON.forEach((address, i,  arr) =>{
+                // Put the address, lat and long into an object
+                let transformedObj = {
+                    address: address.address,
+                    lat: address.latLong.lat,
+                    lng: address.latLong.lng
+                }
+                // Declare new variables to store the object location and values in
+                let streetAddress = transformedObj.address.split(',')[0]
+                let city = transformedObj.address.split(',')[1]
+                let state = transformedObj.address.split(',')[2]
+                let lat = transformedObj.lat
+                let lng = transformedObj.lng
+                // Push the values as an array into the emptyArray
+                newLocationData.push([streetAddress, city, state, lat, lng])
+            });
+            // console.log(newLocationData);
+            
+//////////////////////////////////////////////
+// Establishing the Location List Object
+/////////////////////////////////////////////
+    // Here we are looping through each element in the html files and setting the variables to hold the contents
     $('tbody tbody tbody tr').each(function(i, elem){
         // MeetingID
         var meetingID = $(elem).find('a').eq(0).attr('href').split('=')[1]
@@ -27,16 +62,16 @@ var locationList = [];
         var meetingName = $(elem).find('b').eq(0).text();
         // Street, Room and Floor
         var _address = $(elem).find('b')[0].nextSibling.nextSibling
-        
+        // Address with exceptions
         var address = $(_address).text().split(',')[0].split(/-|Rm/)[0].replace(/\s\s+/g, "" )
                     .replace('W.', 'West').replace(' W ', 'West').replace('astr', 'ast').replace('west', 'West').replace('EAST', 'East').replace(' E. ', 'East').replace(' E ', 'East').replace('West165th', 'West 165th')
                     .replace('rert', 'reet').replace('St.', 'Street').replace('STREET', 'Street').replace('street', 'Street').replace('St Rm 306', 'Street').replace('Street,Red Door', 'Street')
                     .replace('208West13th', '208 West 13th').replace(' East Union Square', 'Union Square East').replace('10U', '10 U')
-                    .replace('80 Street', '80 Saint').replace('206-208', '206').replace('122East37TH', '122 East 37th').replace('Church of the Good Shepard', '543 Main Street')
+                    .replace('80 Street', '80 Saint').replace('206-208', '206').replace('122East37TH', '122 East 37th').replace('Church of the Good Shepard', '543 Main Street').replace('Street,Fort Washington Avenue', 'Street')
                     .replace('337East74th', '337 East 74th').replace('331East70th St', '331 East 70th Street').replace('521West126th St', '521 West 126th Street').replace('58-66', '58')
                     .split(' @ ').join(',').split(' - ').join(',').split('- ').join(',').split('-').join(',').split('. ').join(',').split(' (').join(',').split('(').join(',')
                     .split(')').join(',').split(' ,').join(',').split(',').toString();
-        
+        // roomFloor with exceptions
         var roomFloor = $(_address).text().split(/,| - /).slice(1).toString()
                         .replace(/\b\d{5}\b/g,'').replace(/FL.|Floor/,'Fl').replace('Fl','Floor')
                         .replace(/,/g,'').replace('.','').replace('(Room','Room').trim();
@@ -57,25 +92,31 @@ var locationList = [];
         } else {
             wheelChair = false;
         };
+        // console.log(locationList);
         
-        var meetingLocation = {
+        // Writing the objects to a new file. 
+        fs.writeFileSync('data/locationLists/locationList_zone01.json', JSON.stringify(locationList));
+        // Creating the meetingLocation object and adding Lat and Long
+          var meetingLocation = {
             meetingID: meetingID,
             streetAddress: address,
-            buildingName: buildingName,
-            wheelChairAccess: wheelChair,
-            roomFloor: roomFloor,
             city: "New York",
             state: "NY",
             zipCode: `${zipCode}`,
+            lat: newLocationData[i][3], 
+            lng: newLocationData[i][4],
+            buildingName: buildingName,
+            wheelChairAccess: wheelChair,
+            roomFloor: roomFloor,
             detailsBox: detailsBox,
         };
-        
         locationList.push(meetingLocation);
     });
-
-// console.log(locationList);
-fs.writeFileSync('locationList_zone10.json', JSON.stringify(locationList));
-
+    // console.log(locationList);
+    
+//////////////////////////////////////////////
+// Establishing the Timelist object
+/////////////////////////////////////////////
 var timeList = [];
 
     $('tbody tbody tbody tr').each(function(i, elem){
@@ -138,4 +179,9 @@ var timeList = [];
         });
     });
 // console.log(timeList);
-fs.writeFileSync('timeList_zone010.json', JSON.stringify(timeList));
+fs.writeFileSync('data/timeList/timeList_zone01.json', JSON.stringify(timeList));
+
+
+
+
+

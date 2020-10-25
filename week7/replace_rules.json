@@ -1,0 +1,27 @@
+[
+  {"from": ["St", "St."],"to": "Street"},
+  {"from": ["W.", "west"],"to": "West"}
+]
+​
+// [
+//   {
+//     "from": ["St", "St."],
+//     "to": "Street",
+//     "type": "string"
+//   },
+//   {
+//     "from": ["W.", "west"],
+//     "to": "West",
+//     "type": "string"
+//   },
+//   {
+//     "from": ["FL.", "Fl"],
+//     "to": "Floor",
+//     "type": "string"
+//   },
+//   {
+//     "from": ["/\b\d{5}\b/g"], //to remove the Zipcode
+//     "to": " ",
+//     "type": "regexp"
+//   },
+// ]
