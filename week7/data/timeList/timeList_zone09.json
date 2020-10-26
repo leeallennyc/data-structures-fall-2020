@@ -1,1 +1,90 @@
-[{"meetingID":"447","day":"Saturdays","startTime":"4:15 PM","endTime":"5:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"139","day":"Tuesdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Beginners meeting","specialInterest":"Living Sober"},{"meetingID":"181","day":"Sundays","startTime":"5:00 PM","endTime":"6:00 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"181","day":"Mondays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"181","day":"Tuesdays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"181","day":"Wednesdays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"181","day":"Thursdays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"181","day":"Fridays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"181","day":"Saturdays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"219","day":"Sundays","startTime":"1:00 PM","endTime":"2:00 PM","meetingType":"Tradition meeting","specialInterest":"N/A"},{"meetingID":"219","day":"Mondays","startTime":"1:00 PM","endTime":"2:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"}]
+[
+  {
+    "meetingID": "447",
+    "day": "Saturdays",
+    "startTime": "4:15 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "139",
+    "day": "Tuesdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "Living Sober"
+  },
+  {
+    "meetingID": "181",
+    "day": "Sundays",
+    "startTime": "5:00 PM",
+    "endTime": "6:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "181",
+    "day": "Mondays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "181",
+    "day": "Tuesdays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "181",
+    "day": "Wednesdays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "181",
+    "day": "Thursdays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "181",
+    "day": "Fridays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "181",
+    "day": "Saturdays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "219",
+    "day": "Sundays",
+    "startTime": "1:00 PM",
+    "endTime": "2:00 PM",
+    "meetingType": "Tradition meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "219",
+    "day": "Mondays",
+    "startTime": "1:00 PM",
+    "endTime": "2:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  }
+]

@@ -1,1 +1,1242 @@
-[{"meetingID":"34","day":"Mondays","startTime":"3:00 PM","endTime":"4:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"34","day":"Wednesdays","startTime":"3:00 PM","endTime":"4:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Living Sober"},{"meetingID":"35","day":"Fridays","startTime":"7:45 PM","endTime":"8:45 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"35","day":"Fridays","startTime":"9:00 PM","endTime":"10:00 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"41","day":"Tuesdays","startTime":"6:30 PM","endTime":"7:45 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"1562","day":"Thursdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"AA Literature"},{"meetingID":"46","day":"Fridays","startTime":"9:30 PM","endTime":"10:30 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"48","day":"Saturdays","startTime":"1:00 PM","endTime":"2:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"48","day":"Saturdays","startTime":"2:30 PM","endTime":"4:00 PM","meetingType":"Open meeting","specialInterest":"N/A"},{"meetingID":"48","day":"Mondays","startTime":"4:00 PM","endTime":"5:30 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"48","day":"Tuesdays","startTime":"4:00 PM","endTime":"5:30 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"48","day":"Wednesdays","startTime":"4:00 PM","endTime":"5:30 PM","meetingType":"Open meeting","specialInterest":"Living Sober"},{"meetingID":"48","day":"Fridays","startTime":"4:00 PM","endTime":"5:30 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"51","day":"Mondays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"57","day":"Fridays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"61","day":"Tuesdays","startTime":"6:15 PM","endTime":"7:15 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"61","day":"Tuesdays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"66","day":"Mondays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"66","day":"Fridays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Open meeting","specialInterest":"N/A"},{"meetingID":"67","day":"Thursdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Open Discussion meeting","specialInterest":"Men"},{"meetingID":"69","day":"Tuesdays","startTime":"12:30 PM","endTime":"1:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"69","day":"Thursdays","startTime":"12:30 PM","endTime":"1:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"73","day":"Tuesdays","startTime":"8:15 PM","endTime":"9:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"1423","day":"Mondays","startTime":"7:30 PM","endTime":"8:45 PM","meetingType":"Open meeting","specialInterest":"N/A"},{"meetingID":"1423","day":"Mondays","startTime":"9:00 PM","endTime":"10:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"1423","day":"Mondays","startTime":"10:15 PM","endTime":"11:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"Topic"},{"meetingID":"79","day":"Fridays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"110","day":"Sundays","startTime":"6:00 PM","endTime":"7:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"108","day":"Sundays","startTime":"6:15 PM","endTime":"7:45 PM","meetingType":"Step meeting","specialInterest":"Twelve Steps"},{"meetingID":"129","day":"Saturdays","startTime":"5:00 PM","endTime":"6:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Children Welcome"},{"meetingID":"129","day":"Sundays","startTime":"5:00 PM","endTime":"6:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Children Welcome"},{"meetingID":"129","day":"Fridays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Topic"},{"meetingID":"1552","day":"Fridays","startTime":"7:30 PM","endTime":"8:45 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Fridays","startTime":"7:00 AM","endTime":"8:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Mondays","startTime":"7:00 AM","endTime":"8:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Tuesdays","startTime":"7:00 AM","endTime":"8:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Wednesdays","startTime":"7:00 AM","endTime":"8:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Thursdays","startTime":"7:00 AM","endTime":"8:00 AM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Fridays","startTime":"8:15 AM","endTime":"9:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Mondays","startTime":"8:15 AM","endTime":"9:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Tuesdays","startTime":"8:15 AM","endTime":"9:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Wednesdays","startTime":"8:15 AM","endTime":"9:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"148","day":"Thursdays","startTime":"8:15 AM","endTime":"9:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"149","day":"Sundays","startTime":"8:00 AM","endTime":"9:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"149","day":"Saturdays","startTime":"8:00 AM","endTime":"9:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"154","day":"Saturdays","startTime":"10:30 AM","endTime":"11:30 AM","meetingType":"Step meeting","specialInterest":"First Step Workshop"},{"meetingID":"154","day":"Sundays","startTime":"12:30 PM","endTime":"1:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"154","day":"Saturdays","startTime":"12:30 PM","endTime":"1:30 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Mondays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Open Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"155","day":"Wednesdays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Saturdays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Open Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"155","day":"Thursdays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Step meeting","specialInterest":"As Bill Sees It"},{"meetingID":"155","day":"Sundays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Open Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"155","day":"Tuesdays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Open Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"155","day":"Fridays","startTime":"6:00 AM","endTime":"7:00 AM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Fridays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Wednesdays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Saturdays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Mondays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Thursdays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Sundays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Tuesdays","startTime":"7:15 AM","endTime":"8:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Fridays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Wednesdays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Saturdays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Mondays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Thursdays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Sundays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Tuesdays","startTime":"8:45 AM","endTime":"9:45 AM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Tuesdays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"Living Sober"},{"meetingID":"155","day":"Fridays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Wednesdays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Saturdays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Mondays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Closed Discussion meeting","specialInterest":"Promises"},{"meetingID":"155","day":"Thursdays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"155","day":"Sundays","startTime":"10:15 AM","endTime":"11:15 AM","meetingType":"Tradition meeting","specialInterest":"N/A"},{"meetingID":"1202","day":"Fridays","startTime":"6:30 PM","endTime":"7:45 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"172","day":"Sundays","startTime":"4:30 PM","endTime":"5:30 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"172","day":"Thursdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"176","day":"Mondays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"176","day":"Wednesdays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"176","day":"Fridays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"176","day":"Sundays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Open meeting","specialInterest":"N/A"},{"meetingID":"1136","day":"Tuesdays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Open meeting","specialInterest":"N/A"},{"meetingID":"218","day":"Thursdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"218","day":"Fridays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"218","day":"Thursdays","startTime":"8:15 PM","endTime":"9:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"230","day":"Saturdays","startTime":"6:00 PM","endTime":"7:00 PM","meetingType":"Step meeting","specialInterest":"Gay, Lesbian and Bisexual"},{"meetingID":"230","day":"Wednesdays","startTime":"6:00 PM","endTime":"7:00 PM","meetingType":"Open Discussion meeting","specialInterest":"Interpreted for the Deaf"},{"meetingID":"230","day":"Wednesdays","startTime":"7:15 PM","endTime":"8:15 PM","meetingType":"Beginners meeting","specialInterest":"Gay, Lesbian and Bisexual"},{"meetingID":"230","day":"Wednesdays","startTime":"8:30 PM","endTime":"9:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"Gay, Lesbian and Bisexual"},{"meetingID":"244","day":"Wednesdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"1436","day":"Sundays","startTime":"5:45 PM","endTime":"7:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"249","day":"Fridays","startTime":"1:00 PM","endTime":"2:00 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"249","day":"Mondays","startTime":"1:00 PM","endTime":"2:15 PM","meetingType":"Step meeting","specialInterest":"Meditation"},{"meetingID":"249","day":"Tuesdays","startTime":"1:00 PM","endTime":"2:15 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"249","day":"Wednesdays","startTime":"1:00 PM","endTime":"2:15 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"249","day":"Thursdays","startTime":"1:00 PM","endTime":"2:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"263","day":"Saturdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"263","day":"Saturdays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"263","day":"Saturdays","startTime":"8:00 PM","endTime":"9:00 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"263","day":"Saturdays","startTime":"9:15 PM","endTime":"10:15 PM","meetingType":"Open Discussion meeting","specialInterest":"N/A"},{"meetingID":"1468","day":"Wednesdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"1468","day":"Fridays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"270","day":"Tuesdays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"281","day":"Mondays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"282","day":"Thursdays","startTime":"6:00 PM","endTime":"7:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"283","day":"Sundays","startTime":"10:00 PM","endTime":"11:00 PM","meetingType":"Tradition meeting","specialInterest":"N/A"},{"meetingID":"283","day":"Mondays","startTime":"10:00 PM","endTime":"11:00 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"283","day":"Tuesdays","startTime":"10:00 PM","endTime":"11:00 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"283","day":"Wednesdays","startTime":"10:00 PM","endTime":"11:00 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"283","day":"Thursdays","startTime":"10:00 PM","endTime":"11:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"283","day":"Saturdays","startTime":"10:00 PM","endTime":"11:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"283","day":"Fridays","startTime":"11:00 PM","endTime":"12:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"Promises"},{"meetingID":"291","day":"s","startTime":"12:00 AM","endTime":"12:00 AM","meetingType":"N/A","specialInterest":"N/A"},{"meetingID":"291","day":"Mondays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"Interpreted for the Deaf"},{"meetingID":"291","day":"Wednesdays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Open meeting","specialInterest":"Interpreted for the Deaf"},{"meetingID":"291","day":"Thursdays","startTime":"7:30 PM","endTime":"8:30 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"305","day":"Saturdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"313","day":"Sundays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"1511","day":"Saturdays","startTime":"6:00 PM","endTime":"7:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"1511","day":"Tuesdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"319","day":"Wednesdays","startTime":"8:30 PM","endTime":"9:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"Living Sober"},{"meetingID":"351","day":"Wednesdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"351","day":"Wednesdays","startTime":"8:15 PM","endTime":"9:15 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"355","day":"Saturdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Step meeting","specialInterest":"Promises"},{"meetingID":"372","day":"Sundays","startTime":"10:30 AM","endTime":"11:30 AM","meetingType":"Closed Discussion meeting","specialInterest":"Men"},{"meetingID":"375","day":"Sundays","startTime":"12:00 PM","endTime":"1:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"391","day":"Thursdays","startTime":"3:30 PM","endTime":"4:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"391","day":"Tuesdays","startTime":"3:30 PM","endTime":"4:30 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"391","day":"Tuesdays","startTime":"4:30 PM","endTime":"5:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"391","day":"Thursdays","startTime":"4:30 PM","endTime":"5:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"391","day":"Fridays","startTime":"4:30 PM","endTime":"5:30 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"401","day":"Saturdays","startTime":"10:00 AM","endTime":"11:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"As Bill Sees It"},{"meetingID":"401","day":"Saturdays","startTime":"11:15 AM","endTime":"12:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"402","day":"Thursdays","startTime":"6:15 PM","endTime":"7:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"Agnostic"},{"meetingID":"1204","day":"Wednesdays","startTime":"4:45 PM","endTime":"5:45 PM","meetingType":"Open Discussion meeting","specialInterest":"Medication"},{"meetingID":"409","day":"Thursdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"409","day":"Thursdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"409","day":"Tuesdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"N/A"},{"meetingID":"409","day":"Tuesdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Big Book meeting","specialInterest":"N/A"},{"meetingID":"411","day":"Wednesdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"N/A"},{"meetingID":"412","day":"Fridays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Step meeting","specialInterest":"N/A"},{"meetingID":"413","day":"Saturdays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Beginners meeting","specialInterest":"Young People"},{"meetingID":"1583","day":"Saturdays","startTime":"5:00 PM","endTime":"6:00 PM","meetingType":"Open Discussion meeting","specialInterest":"Agnostic"},{"meetingID":"417","day":"Wednesdays","startTime":"9:00 AM","endTime":"10:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"417","day":"Saturdays","startTime":"9:00 AM","endTime":"10:00 AM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"423","day":"Fridays","startTime":"7:00 PM","endTime":"8:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"1488","day":"Thursdays","startTime":"12:00 PM","endTime":"1:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"1488","day":"Mondays","startTime":"12:00 PM","endTime":"1:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"1488","day":"Wednesdays","startTime":"12:30 PM","endTime":"1:30 PM","meetingType":"Beginners meeting","specialInterest":"Women"},{"meetingID":"1487","day":"Mondays","startTime":"12:00 PM","endTime":"1:00 PM","meetingType":"Open Discussion meeting","specialInterest":"Women"},{"meetingID":"428","day":"Mondays","startTime":"12:00 PM","endTime":"1:15 PM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"429","day":"Tuesdays","startTime":"6:30 PM","endTime":"7:30 PM","meetingType":"Closed Discussion meeting","specialInterest":"Women"},{"meetingID":"430","day":"Wednesdays","startTime":"6:00 PM","endTime":"7:00 PM","meetingType":"Closed Discussion meeting","specialInterest":"Special Purpose Groups"}]
+[
+  {
+    "meetingID": "34",
+    "day": "Mondays",
+    "startTime": "3:00 PM",
+    "endTime": "4:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "34",
+    "day": "Wednesdays",
+    "startTime": "3:00 PM",
+    "endTime": "4:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Living Sober"
+  },
+  {
+    "meetingID": "35",
+    "day": "Fridays",
+    "startTime": "7:45 PM",
+    "endTime": "8:45 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "35",
+    "day": "Fridays",
+    "startTime": "9:00 PM",
+    "endTime": "10:00 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "41",
+    "day": "Tuesdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:45 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1562",
+    "day": "Thursdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "AA Literature"
+  },
+  {
+    "meetingID": "46",
+    "day": "Fridays",
+    "startTime": "9:30 PM",
+    "endTime": "10:30 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "48",
+    "day": "Saturdays",
+    "startTime": "1:00 PM",
+    "endTime": "2:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "48",
+    "day": "Saturdays",
+    "startTime": "2:30 PM",
+    "endTime": "4:00 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "48",
+    "day": "Mondays",
+    "startTime": "4:00 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "48",
+    "day": "Tuesdays",
+    "startTime": "4:00 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "48",
+    "day": "Wednesdays",
+    "startTime": "4:00 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "Living Sober"
+  },
+  {
+    "meetingID": "48",
+    "day": "Fridays",
+    "startTime": "4:00 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "51",
+    "day": "Mondays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "57",
+    "day": "Fridays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "61",
+    "day": "Tuesdays",
+    "startTime": "6:15 PM",
+    "endTime": "7:15 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "61",
+    "day": "Tuesdays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "66",
+    "day": "Mondays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "66",
+    "day": "Fridays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "67",
+    "day": "Thursdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "Men"
+  },
+  {
+    "meetingID": "69",
+    "day": "Tuesdays",
+    "startTime": "12:30 PM",
+    "endTime": "1:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "69",
+    "day": "Thursdays",
+    "startTime": "12:30 PM",
+    "endTime": "1:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "73",
+    "day": "Tuesdays",
+    "startTime": "8:15 PM",
+    "endTime": "9:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1423",
+    "day": "Mondays",
+    "startTime": "7:30 PM",
+    "endTime": "8:45 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1423",
+    "day": "Mondays",
+    "startTime": "9:00 PM",
+    "endTime": "10:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1423",
+    "day": "Mondays",
+    "startTime": "10:15 PM",
+    "endTime": "11:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Topic"
+  },
+  {
+    "meetingID": "79",
+    "day": "Fridays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "110",
+    "day": "Sundays",
+    "startTime": "6:00 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "108",
+    "day": "Sundays",
+    "startTime": "6:15 PM",
+    "endTime": "7:45 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "Twelve Steps"
+  },
+  {
+    "meetingID": "129",
+    "day": "Saturdays",
+    "startTime": "5:00 PM",
+    "endTime": "6:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Children Welcome"
+  },
+  {
+    "meetingID": "129",
+    "day": "Sundays",
+    "startTime": "5:00 PM",
+    "endTime": "6:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Children Welcome"
+  },
+  {
+    "meetingID": "129",
+    "day": "Fridays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Topic"
+  },
+  {
+    "meetingID": "1552",
+    "day": "Fridays",
+    "startTime": "7:30 PM",
+    "endTime": "8:45 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Fridays",
+    "startTime": "7:00 AM",
+    "endTime": "8:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Mondays",
+    "startTime": "7:00 AM",
+    "endTime": "8:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Tuesdays",
+    "startTime": "7:00 AM",
+    "endTime": "8:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Wednesdays",
+    "startTime": "7:00 AM",
+    "endTime": "8:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Thursdays",
+    "startTime": "7:00 AM",
+    "endTime": "8:00 AM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Fridays",
+    "startTime": "8:15 AM",
+    "endTime": "9:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Mondays",
+    "startTime": "8:15 AM",
+    "endTime": "9:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Tuesdays",
+    "startTime": "8:15 AM",
+    "endTime": "9:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Wednesdays",
+    "startTime": "8:15 AM",
+    "endTime": "9:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "148",
+    "day": "Thursdays",
+    "startTime": "8:15 AM",
+    "endTime": "9:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "149",
+    "day": "Sundays",
+    "startTime": "8:00 AM",
+    "endTime": "9:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "149",
+    "day": "Saturdays",
+    "startTime": "8:00 AM",
+    "endTime": "9:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "154",
+    "day": "Saturdays",
+    "startTime": "10:30 AM",
+    "endTime": "11:30 AM",
+    "meetingType": "Step meeting",
+    "specialInterest": "First Step Workshop"
+  },
+  {
+    "meetingID": "154",
+    "day": "Sundays",
+    "startTime": "12:30 PM",
+    "endTime": "1:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "154",
+    "day": "Saturdays",
+    "startTime": "12:30 PM",
+    "endTime": "1:30 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Mondays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "155",
+    "day": "Wednesdays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Saturdays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "155",
+    "day": "Thursdays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Step meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "155",
+    "day": "Sundays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "155",
+    "day": "Tuesdays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "155",
+    "day": "Fridays",
+    "startTime": "6:00 AM",
+    "endTime": "7:00 AM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Fridays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Wednesdays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Saturdays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Mondays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Thursdays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Sundays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Tuesdays",
+    "startTime": "7:15 AM",
+    "endTime": "8:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Fridays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Wednesdays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Saturdays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Mondays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Thursdays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Sundays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Tuesdays",
+    "startTime": "8:45 AM",
+    "endTime": "9:45 AM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Tuesdays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Living Sober"
+  },
+  {
+    "meetingID": "155",
+    "day": "Fridays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Wednesdays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Saturdays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Mondays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Promises"
+  },
+  {
+    "meetingID": "155",
+    "day": "Thursdays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "155",
+    "day": "Sundays",
+    "startTime": "10:15 AM",
+    "endTime": "11:15 AM",
+    "meetingType": "Tradition meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1202",
+    "day": "Fridays",
+    "startTime": "6:30 PM",
+    "endTime": "7:45 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "172",
+    "day": "Sundays",
+    "startTime": "4:30 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "172",
+    "day": "Thursdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "176",
+    "day": "Mondays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "176",
+    "day": "Wednesdays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "176",
+    "day": "Fridays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "176",
+    "day": "Sundays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1136",
+    "day": "Tuesdays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "218",
+    "day": "Thursdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "218",
+    "day": "Fridays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "218",
+    "day": "Thursdays",
+    "startTime": "8:15 PM",
+    "endTime": "9:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "230",
+    "day": "Saturdays",
+    "startTime": "6:00 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "Gay, Lesbian and Bisexual"
+  },
+  {
+    "meetingID": "230",
+    "day": "Wednesdays",
+    "startTime": "6:00 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "Interpreted for the Deaf"
+  },
+  {
+    "meetingID": "230",
+    "day": "Wednesdays",
+    "startTime": "7:15 PM",
+    "endTime": "8:15 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "Gay, Lesbian and Bisexual"
+  },
+  {
+    "meetingID": "230",
+    "day": "Wednesdays",
+    "startTime": "8:30 PM",
+    "endTime": "9:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Gay, Lesbian and Bisexual"
+  },
+  {
+    "meetingID": "244",
+    "day": "Wednesdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1436",
+    "day": "Sundays",
+    "startTime": "5:45 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "249",
+    "day": "Fridays",
+    "startTime": "1:00 PM",
+    "endTime": "2:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "249",
+    "day": "Mondays",
+    "startTime": "1:00 PM",
+    "endTime": "2:15 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "Meditation"
+  },
+  {
+    "meetingID": "249",
+    "day": "Tuesdays",
+    "startTime": "1:00 PM",
+    "endTime": "2:15 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "249",
+    "day": "Wednesdays",
+    "startTime": "1:00 PM",
+    "endTime": "2:15 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "249",
+    "day": "Thursdays",
+    "startTime": "1:00 PM",
+    "endTime": "2:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "263",
+    "day": "Saturdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "263",
+    "day": "Saturdays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "263",
+    "day": "Saturdays",
+    "startTime": "8:00 PM",
+    "endTime": "9:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "263",
+    "day": "Saturdays",
+    "startTime": "9:15 PM",
+    "endTime": "10:15 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1468",
+    "day": "Wednesdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1468",
+    "day": "Fridays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "270",
+    "day": "Tuesdays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "281",
+    "day": "Mondays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "282",
+    "day": "Thursdays",
+    "startTime": "6:00 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "283",
+    "day": "Sundays",
+    "startTime": "10:00 PM",
+    "endTime": "11:00 PM",
+    "meetingType": "Tradition meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "283",
+    "day": "Mondays",
+    "startTime": "10:00 PM",
+    "endTime": "11:00 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "283",
+    "day": "Tuesdays",
+    "startTime": "10:00 PM",
+    "endTime": "11:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "283",
+    "day": "Wednesdays",
+    "startTime": "10:00 PM",
+    "endTime": "11:00 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "283",
+    "day": "Thursdays",
+    "startTime": "10:00 PM",
+    "endTime": "11:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "283",
+    "day": "Saturdays",
+    "startTime": "10:00 PM",
+    "endTime": "11:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "283",
+    "day": "Fridays",
+    "startTime": "11:00 PM",
+    "endTime": "12:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Promises"
+  },
+  {
+    "meetingID": "291",
+    "day": "s",
+    "startTime": "12:00 AM",
+    "endTime": "12:00 AM",
+    "meetingType": "N/A",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "291",
+    "day": "Mondays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Interpreted for the Deaf"
+  },
+  {
+    "meetingID": "291",
+    "day": "Wednesdays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Open meeting",
+    "specialInterest": "Interpreted for the Deaf"
+  },
+  {
+    "meetingID": "291",
+    "day": "Thursdays",
+    "startTime": "7:30 PM",
+    "endTime": "8:30 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "305",
+    "day": "Saturdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "313",
+    "day": "Sundays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1511",
+    "day": "Saturdays",
+    "startTime": "6:00 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "1511",
+    "day": "Tuesdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "319",
+    "day": "Wednesdays",
+    "startTime": "8:30 PM",
+    "endTime": "9:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Living Sober"
+  },
+  {
+    "meetingID": "351",
+    "day": "Wednesdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "351",
+    "day": "Wednesdays",
+    "startTime": "8:15 PM",
+    "endTime": "9:15 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "355",
+    "day": "Saturdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "Promises"
+  },
+  {
+    "meetingID": "372",
+    "day": "Sundays",
+    "startTime": "10:30 AM",
+    "endTime": "11:30 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Men"
+  },
+  {
+    "meetingID": "375",
+    "day": "Sundays",
+    "startTime": "12:00 PM",
+    "endTime": "1:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "391",
+    "day": "Thursdays",
+    "startTime": "3:30 PM",
+    "endTime": "4:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "391",
+    "day": "Tuesdays",
+    "startTime": "3:30 PM",
+    "endTime": "4:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "391",
+    "day": "Tuesdays",
+    "startTime": "4:30 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "391",
+    "day": "Thursdays",
+    "startTime": "4:30 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "391",
+    "day": "Fridays",
+    "startTime": "4:30 PM",
+    "endTime": "5:30 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "401",
+    "day": "Saturdays",
+    "startTime": "10:00 AM",
+    "endTime": "11:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "As Bill Sees It"
+  },
+  {
+    "meetingID": "401",
+    "day": "Saturdays",
+    "startTime": "11:15 AM",
+    "endTime": "12:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "402",
+    "day": "Thursdays",
+    "startTime": "6:15 PM",
+    "endTime": "7:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Agnostic"
+  },
+  {
+    "meetingID": "1204",
+    "day": "Wednesdays",
+    "startTime": "4:45 PM",
+    "endTime": "5:45 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "Medication"
+  },
+  {
+    "meetingID": "409",
+    "day": "Thursdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "409",
+    "day": "Thursdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "409",
+    "day": "Tuesdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "409",
+    "day": "Tuesdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Big Book meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "411",
+    "day": "Wednesdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "412",
+    "day": "Fridays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Step meeting",
+    "specialInterest": "N/A"
+  },
+  {
+    "meetingID": "413",
+    "day": "Saturdays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "Young People"
+  },
+  {
+    "meetingID": "1583",
+    "day": "Saturdays",
+    "startTime": "5:00 PM",
+    "endTime": "6:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "Agnostic"
+  },
+  {
+    "meetingID": "417",
+    "day": "Wednesdays",
+    "startTime": "9:00 AM",
+    "endTime": "10:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "417",
+    "day": "Saturdays",
+    "startTime": "9:00 AM",
+    "endTime": "10:00 AM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "423",
+    "day": "Fridays",
+    "startTime": "7:00 PM",
+    "endTime": "8:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "1488",
+    "day": "Thursdays",
+    "startTime": "12:00 PM",
+    "endTime": "1:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "1488",
+    "day": "Mondays",
+    "startTime": "12:00 PM",
+    "endTime": "1:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "1488",
+    "day": "Wednesdays",
+    "startTime": "12:30 PM",
+    "endTime": "1:30 PM",
+    "meetingType": "Beginners meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "1487",
+    "day": "Mondays",
+    "startTime": "12:00 PM",
+    "endTime": "1:00 PM",
+    "meetingType": "Open Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "428",
+    "day": "Mondays",
+    "startTime": "12:00 PM",
+    "endTime": "1:15 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "429",
+    "day": "Tuesdays",
+    "startTime": "6:30 PM",
+    "endTime": "7:30 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Women"
+  },
+  {
+    "meetingID": "430",
+    "day": "Wednesdays",
+    "startTime": "6:00 PM",
+    "endTime": "7:00 PM",
+    "meetingType": "Closed Discussion meeting",
+    "specialInterest": "Special Purpose Groups"
+  }
+]

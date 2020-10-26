@@ -1,1 +1,41 @@
-[{"meetingID":"447","streetAddress":"35 East 125 Street","city":"New York","state":"NY","zipCode":"10035","lat":"40.8059276652577","lng":"-73.9408673127926","buildingName":"Harlem Childrens Zone Admin. Offices","wheelChairAccess":true,"roomFloor":"1st Floor Conference Room","detailsBox":"O 2nd, S 3rd, Anniv. 4th & BB 5th Sat."},{"meetingID":"139","streetAddress":"223 East 117th Street","city":"New York","state":"NY","zipCode":"10035","lat":"40.7984929663362","lng":"-73.9389774473402","buildingName":"Peter Jay Sharpe Building","wheelChairAccess":true,"roomFloor":"1st Floor Dining Room","detailsBox":"Living Sober 1st Tuesday."},{"meetingID":"181","streetAddress":"2126 2nd Avenue","city":"New York","state":"NY","zipCode":"10029","lat":"40.7926447124665","lng":"-73.940850658861","buildingName":"","wheelChairAccess":true,"roomFloor":"1st Floor","detailsBox":"Spanish speaking meetings."}]
+[
+  {
+    "meetingID": "447",
+    "streetAddress": "35 East 125 Street",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10035",
+    "lat": "40.8059276652577",
+    "lng": "-73.9408673127926",
+    "buildingName": "Harlem Childrens Zone Admin. Offices",
+    "wheelChairAccess": true,
+    "roomFloor": "1st Floor Conference Room",
+    "detailsBox": "O 2nd, S 3rd, Anniv. 4th & BB 5th Sat."
+  },
+  {
+    "meetingID": "139",
+    "streetAddress": "223 East 117th Street",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10035",
+    "lat": "40.7984929663362",
+    "lng": "-73.9389774473402",
+    "buildingName": "Peter Jay Sharpe Building",
+    "wheelChairAccess": true,
+    "roomFloor": "1st Floor Dining Room",
+    "detailsBox": "Living Sober 1st Tuesday."
+  },
+  {
+    "meetingID": "181",
+    "streetAddress": "2126 2nd Avenue",
+    "city": "New York",
+    "state": "NY",
+    "zipCode": "10029",
+    "lat": "40.7926447124665",
+    "lng": "-73.940850658861",
+    "buildingName": "",
+    "wheelChairAccess": true,
+    "roomFloor": "1st Floor",
+    "detailsBox": "Spanish speaking meetings."
+  }
+]

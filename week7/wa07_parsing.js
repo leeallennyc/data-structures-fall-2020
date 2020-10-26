@@ -24,7 +24,7 @@ let newLocationData = [];
 var locationList = [];
 
 // Read in street address and lat long data in synchronously
-let latLongData = fs.readFileSync("data/Addresses_Lat_Long_json/streetAddresses_zone01.json", "utf8") 
+let latLongData = fs.readFileSync("data/Addresses_Lat_Long_json/streetAddresses_zone1.json", "utf8") 
         latLongJSON = JSON.parse(latLongData);
         // console.log(output);
         
@@ -63,7 +63,7 @@ let latLongData = fs.readFileSync("data/Addresses_Lat_Long_json/streetAddresses_
         // Street, Room and Floor
         var _address = $(elem).find('b')[0].nextSibling.nextSibling
         // Address with exceptions
-        var address = $(_address).text().split(',')[0].split(/-|Rm/)[0].replace(/\s\s+/g, "" )
+        var address = $(_address).text().split(',')[0].split(/- |Rm/)[0].replace(/\s\s+/g, "" )
                     .replace('W.', 'West').replace(' W ', 'West').replace('astr', 'ast').replace('west', 'West').replace('EAST', 'East').replace(' E. ', 'East').replace(' E ', 'East').replace('West165th', 'West 165th')
                     .replace('rert', 'reet').replace('St.', 'Street').replace('STREET', 'Street').replace('street', 'Street').replace('St Rm 306', 'Street').replace('Street,Red Door', 'Street')
                     .replace('208West13th', '208 West 13th').replace(' East Union Square', 'Union Square East').replace('10U', '10 U')
