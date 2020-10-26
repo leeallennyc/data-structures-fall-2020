@@ -350,7 +350,7 @@ fs.writeFileSync('./data/concat_clean_final/locationList_all_zones_cleaned.json'
 // Read in the uncleaned TimeList File with all Zones and Clean All Time Zones and Export as JSON file     
 let timeListAllZones_uncleaned = fs.readFileSync('./data/concat_clean_final/timeList_all_zones.json', 'utf8')
 // console.log(timeListAllZones_uncleaned);
-let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
+let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}').replace(/\}]\s\s{/,'},\n\t{'));
 // console.log(cleanedTimeZonesAll);
 fs.writeFileSync('./data/concat_clean_final/timeList_all_zones_cleaned.json', cleanedTimeZonesAll)
 
@@ -359,7 +359,7 @@ fs.writeFileSync('./data/concat_clean_final/timeList_all_zones_cleaned.json', cl
 
 #### Step Five -- Postgres and SQL
 * Preparing and Loading the JSON files into our Postgres DB using SQL.
-* Encountered Errors in the JSON files and cleaned up with Regex in `wa07_concat_cleanup.js` file: `let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}').replace(/\}]\s\s{/,'},\n\t{'));``
+* Encountered Errors in the JSON files and cleaned up with Regex in `wa07_concat_cleanup.js` file: `let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}').replace(/\}]\s\s{/,'},\n\t{'));`
 * Despite a syntax problem when inserting the `locationList_all_zones_cleaned`file, the data seemed to be inserted fine into the DB.
 
 Adapting `wa04_a.js`, `wa04_b.js`, `wa04c.js`: I used a combination of console.log and commenting to achieve the end goal. The idea is to come back to the files  to clean then up and automate down the line. 
