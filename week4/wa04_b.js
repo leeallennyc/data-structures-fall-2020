@@ -1,5 +1,4 @@
 // Part b
-
 const { Client } = require('pg');
 const fs = require('fs');
 var async = require('async');  
@@ -27,7 +26,7 @@ async.eachSeries(addressesForDb, function(value, callback) {
         console.log(err, res);
         client.end();
     });
-    setTimeout(callback, 1000); 
+    setTimeout(callback, 500); 
 }); 
 
 // // Setup timeList Files for inserting into DB

@@ -17,7 +17,7 @@ const client = new Client(db_credentials);
 client.connect();
 
 // Sample SQL statement to query meetings on Monday that start on or after 7:00pm: 
-var thisQuery = "SELECT address, lat, long FROM aalocations WHERE address LIKE '%96th%' OR lat > 40.801;"
+var thisQuery = "SELECT address, lat, lng FROM aalocations WHERE address LIKE '%96th%' OR lat > 40.801;"
 
 // Returns Addresses for 96th Street or a lat over 40.801
 // address                              lat         long       

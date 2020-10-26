@@ -18,7 +18,7 @@ client.connect();
 
 // Sample SQL statement to query the entire contents of a table: 
 var locationListQuery = "SELECT * FROM aalocations;";
-var timeListQuery = "SELECT * FROM aatimeLists;";
+// var timeListQuery = "SELECT * FROM aatimeLists;";
 
 
 client.query(locationListQuery, (err, res) => {
@@ -26,7 +26,7 @@ client.query(locationListQuery, (err, res) => {
     client.end();
 });
 
-client.query(timeListQuery, (err, res) => {
-    console.log(err, res.rows);
-    client.end();
-});
+// client.query(timeListQuery, (err, res) => {
+//     console.log(err, res.rows);
+//     client.end();
+// });
