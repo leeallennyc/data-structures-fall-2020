@@ -18,80 +18,87 @@ function readAppend(file, appendFile) {
         if (err) throw err;
         console.log('The "data to append" was appended to file!');
     });
-    
     });
 }
+
 //////////////////////
 // Location Lists
 /////////////////////
-// let file = './data/concat_clean_final/locationList_all_zones.json'
 
-// let appendFile = './data/locationLists/locationList_zone01.json'
-// readAppend(file, appendFile);
+let file = './data/concat_clean_final/locationList_all_zones.json'
 
-// appendFile = './data/locationLists/locationList_zone02.json'
-// readAppend(file, appendFile);
+let appendFile = './data/locationLists/locationList_zone01.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone03.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone02.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone04.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone03.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone05.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone04.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone06.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone05.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone07.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone06.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone08.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone07.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone09.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone08.json'
+readAppend(file, appendFile);
 
-// appendFile = './data/locationLists/locationList_zone10.json'
-// readAppend(file, appendFile);
+appendFile = './data/locationLists/locationList_zone09.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone10.json'
+readAppend(file, appendFile);
+
 ////////////////////////////
 // Time Lists
 ///////////////////////////
-/////////////////////
-let file = './data/concat_clean_final/timeList_all_zones.json'
+let file2 = './data/concat_clean_final/timeList_all_zones.json'
 
-let appendFile = './data/timeList/timeList_zone01.json'
-readAppend(file, appendFile);
+let appendFile2 = './data/timeList/timeList_zone01.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone02.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone02.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone03.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone03.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone04.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone04.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone05.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone05.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone06.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone06.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone07.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone07.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone08.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone08.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone09.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone09.json'
+readAppend(file2, appendFile2);
 
-appendFile = './data/timeList/timeList_zone10.json'
-readAppend(file, appendFile);
+appendFile2 = './data/timeList/timeList_zone10.json'
+readAppend(file2, appendFile2);
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////
 //  TESTS
+////////////////////////////////////////////////////////////////////////////////////////
       
 // Combining Location Lists
 // var filenamesLocation = fs.readdirSync(`${__dirname}/data/locationLists`);
@@ -110,9 +117,7 @@ readAppend(file, appendFile);
 //     // console.log(filledArrayString)
 //     let splitFiles = filledArrayString.replace('[{', '{').replace(']}', '}').replace('"}]', '"},')
 //     console.log(splitFiles);
-    
 //     };
-    
     
     
     // Combining Location Lists
@@ -142,8 +147,7 @@ readAppend(file, appendFile);
     //         console.log(commaEliminator)
     //         }
          
-    
-    
+
     // let lastIndex = splitFiles.lastIndexOf('"},')
     // console.log(lastIndex);
     

@@ -1,14 +1,36 @@
-
-
 // dependencies
 const fs = require('fs'),
-      querystring = require('querystring'),
-      request = require('request'),
       async = require('async'),
-      dotenv = require('dotenv'),
       path = require('path');
       
+      
+// Clean All Locations  
+let locationList_all_zones_uncleaned = fs.readFileSync('./data/concat_clean_final/locationList_all_zones.json', 'utf8')
+// console.log(locationList_all_zones_uncleaned);
+let cleanedLocationsAll = (locationList_all_zones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
+// console.log(cleanedLocationsAll);
+fs.writeFileSync('./data/concat_clean_final/locationList_all_zones_cleaned.json', cleanedLocationsAll)      
+      
+      
 
+// Clean All Time Zones     
+let timeListAllZones_uncleaned = fs.readFileSync('./data/concat_clean_final/timeList_all_zones.json', 'utf8')
+// console.log(timeListAllZones_uncleaned);
+let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
+// console.log(cleanedTimeZonesAll);
+fs.writeFileSync('./data/concat_clean_final/timeList_all_zones_cleaned.json', cleanedTimeZonesAll)
+
+
+
+
+
+
+
+
+      
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// TESTS
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // let allZones_uncleaned = fs.readFileSync('./data/concat_clean_final/locationList_all_zones.json', 'utf8')
 // // console.log(allZones_uncleaned);
 
@@ -22,19 +44,6 @@ const fs = require('fs'),
 
 // let regexOperation = cleanedJSON.replace(/\s/g,' ')
 // console.log(regexOperation);
-
-let timeListAllZones_uncleaned = fs.readFileSync('./data/concat_clean_final/timeList_all_zones.json', 'utf8')
-// console.log(allZones_uncleaned);
-
-let cleanedTimeZones = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
-console.log(cleanedTimeZones);
-
-fs.writeFileSync('./data/concat_clean_final/timeList_all_zones_cleaned.json', cleanedTimeZones)
-
-
-
-
-
 
 // let emptyArray = [];
 
