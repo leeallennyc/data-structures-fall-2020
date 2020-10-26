@@ -7870,7 +7870,8 @@
     "endTime": "9:30 PM",
     "meetingType": "Closed Discussion meeting",
     "specialInterest": "Young People"
-  }]  {
+  },
+	{
     "meetingID": "159",
     "day": "Sundays",
     "startTime": "4:00 PM",

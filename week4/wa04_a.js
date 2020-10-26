@@ -16,13 +16,34 @@ db_credentials.port =  5432;
 // Connect to the AWS RDS Postgres database
 const client = new Client(db_credentials);
 client.connect();
+/////////////////////////
+// Creating the tables:
+////////////////////////
+var thisLocationsQuery = "CREATE TABLE aalocations (meetingID integer, address varchar(120), city varchar(120), state varchar(2), zipCode integer, lat double precision, lng double precision, buildingName varchar(200), wheelChairAccess boolean, roomFloor varchar(120), detailsBox varchar(250));";
+var thisTimeListQuery = "CREATE TABLE aatimeLists (meetingID integer, day varchar(120), startTime time, endTime time, meetingType varchar(120), specialInterest varchar(255));";
 
-// Sample SQL statement to create a table:
-var thisQuery = "CREATE TABLE aalocations (address varchar(120), lat double precision, long double precision);";
-// Sample SQL statement to delete a table:
-// var thisQuery = "DROP TABLE aalocations;";
+client.query(thisLocationsQuery, (err, res) => {
+    console.log(err, res);
+    // client.end();
+});
 
-client.query(thisQuery, (err, res) => {
+client.query(thisTimeListQuery, (err, res) => {
     console.log(err, res);
     client.end();
 });
+
+//////////////////////////
+//Dropping the tables
+//////////////////////////
+// var dropThisLocationsQuery = "DROP TABLE aalocations;";
+// var dropThisTimeListTable =  "DROP TABLE aatimeLists;";
+
+// client.query(dropThisLocationsQuery, (err, res) => {
+//     console.log(err, res);
+//     // client.end();
+// });
+
+// client.query(dropThisTimeListTable, (err, res) => {
+//     console.log(err, res);
+//     client.end();
+// });
