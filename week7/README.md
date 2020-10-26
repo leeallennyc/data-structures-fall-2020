@@ -177,19 +177,153 @@ fs.writeFileSync('timeList_zone010.json', JSON.stringify(timeList));
 * I ended up feeding each one of the files into the week3 [code](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week3/data/wa03.js) and placed them in the [completed_addresses folder](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3/data/complete_addresses)
 
 
-#### Step Four (to come)
-* Preparing all the JSON for different tables, and loading the JSON files into our Postgres DB using SQL.
+#### Step Four (Stitching the Files together)
+* Here we created two files called `wa07_concat.js` and `wa07_concat_cleanup.js`, which concatenate all the files together and clean the files and export at two different JSON files.
+
+```js
+
+`wa07_concat.js`
+
+"use strict"
+
+// dependencies
+const fs = require('fs'),
+      querystring = require('querystring'),
+      request = require('request'),
+      async = require('async'),
+      dotenv = require('dotenv'),
+      path = require('path');
+      
+    
+function readAppend(file, appendFile) {
+    fs.readFile(appendFile, function (err, data){
+        if (err) throw err;
+        console.log('File was read');
+        
+    fs.appendFile(file, data, function (err) {
+        if (err) throw err;
+        console.log('The "data to append" was appended to file!');
+    });
+    });
+}
+
+//////////////////////
+// Location Lists
+/////////////////////
+
+let file = './data/concat_clean_final/locationList_all_zones.json'
+
+let appendFile = './data/locationLists/locationList_zone01.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone02.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone03.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone04.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone05.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone06.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone07.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone08.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone09.json'
+readAppend(file, appendFile);
+
+appendFile = './data/locationLists/locationList_zone10.json'
+readAppend(file, appendFile);
+
+////////////////////////////
+// Time Lists
+///////////////////////////
+let file2 = './data/concat_clean_final/timeList_all_zones.json'
+
+let appendFile2 = './data/timeList/timeList_zone01.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone02.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone03.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone04.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone05.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone06.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone07.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone08.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone09.json'
+readAppend(file2, appendFile2);
+
+appendFile2 = './data/timeList/timeList_zone10.json'
+readAppend(file2, appendFile2);
+
+```
+* And the cleaning of the files
+
+```js
+
+`wa07_concat_cleanup.js`
+
+// dependencies
+const fs = require('fs'),
+      async = require('async'),
+      path = require('path');
+      
+      
+// Read in the uncleaned LocationList File with all Zones and Clean All Location List Zones and Export as JSON file  
+let locationList_all_zones_uncleaned = fs.readFileSync('./data/concat_clean_final/locationList_all_zones.json', 'utf8')
+// console.log(locationList_all_zones_uncleaned);
+let cleanedLocationsAll = (locationList_all_zones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
+// console.log(cleanedLocationsAll);
+fs.writeFileSync('./data/concat_clean_final/locationList_all_zones_cleaned.json', cleanedLocationsAll)      
+      
+      
+
+// Read in the uncleaned TimeList File with all Zones and Clean All Time Zones and Export as JSON file     
+let timeListAllZones_uncleaned = fs.readFileSync('./data/concat_clean_final/timeList_all_zones.json', 'utf8')
+// console.log(timeListAllZones_uncleaned);
+let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
+// console.log(cleanedTimeZonesAll);
+fs.writeFileSync('./data/concat_clean_final/timeList_all_zones_cleaned.json', cleanedTimeZonesAll)
+
+```
+
+#### Step Five (Stitching the Files together)
+* Preparing and Loading the JSON files into our Postgres DB using SQL.
 
 
 
 
 ### Observations & Learnings
-* 
-
+* This was by far the greatest challenge we undertook to date. The collaborative nature of the assignment was benefical for all of us, and I hope we get to do this again on other assignments.
+* Cleaning and Preparing is really 90% of the work.
+* If you get stuck with one solution approach, stop and try a different approach.
+* Time is always a factor, and the extra time to complete this assignment was appreciated.
 
 ---
 ### Challenges / Opportunities
-* 
+* When collaborating, there are many different styles and differences in how people approach a problem. The opportunity is in how we bring everyone's unique abilities together.
 
 ### Additional / Readings for the week
 * Gitelman, Chapter 7
