@@ -359,7 +359,123 @@ fs.writeFileSync('./data/concat_clean_final/timeList_all_zones_cleaned.json', cl
 
 #### Step Five -- Postgres and SQL
 * Preparing and Loading the JSON files into our Postgres DB using SQL.
-* 
+* Encountered Errors in the JSON files and cleaned up with Regex in `wa07_concat_cleanup.js` file: `let cleanedTimeZonesAll = (timeListAllZones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}').replace(/\}]\s\s{/,'},\n\t{'));``
+* Despite a syntax problem when inserting the `locationList_all_zones_cleaned`file, the data seemed to be inserted fine into the DB.
+
+Adapting `wa04_a.js`, `wa04_b.js`, `wa04c.js`: I used a combination of console.log and commenting to achieve the end goal. The idea is to come back to the files  to clean then up and automate down the line. 
+
+
+* Part A - Creating or Dropping the Tables [Full File Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/wa04_a.js)
+
+```js
+const { Client } = require('pg');
+const dotenv = require('dotenv');
+dotenv.config();
+
+
+// AWS RDS POSTGRESQL INSTANCE
+var db_credentials = new Object();
+db_credentials.user =  'lee';
+db_credentials.host = 'data-structures-2020.ca5ggconoz0d.us-east-1.rds.amazonaws.com';
+db_credentials.database = 'aa';
+db_credentials.password = process.env.AWSRDS_PW;
+db_credentials.port =  5432;
+
+// Connect to the AWS RDS Postgres database
+const client = new Client(db_credentials);
+client.connect();
+/////////////////////////
+// Creating the tables:
+////////////////////////
+var thisLocationsQuery = "CREATE TABLE aalocations (meetingID integer, address varchar(120), city varchar(120), state varchar(2), zipCode varchar(20), lat double precision, lng double precision, buildingName varchar(200), wheelChairAccess boolean, roomFloor varchar(120), detailsBox varchar(250));";
+var thisTimeListQuery = "CREATE TABLE aatimeLists (meetingID integer, day varchar(120), startTime time, endTime time, meetingType varchar(120), specialInterest varchar(255));";
+
+client.query(thisLocationsQuery, (err, res) => {
+    console.log(err, res);
+    // client.end();
+});
+
+client.query(thisTimeListQuery, (err, res) => {
+    console.log(err, res);
+    client.end();
+});
+
+//////////////////////////
+//Dropping the tables
+//////////////////////////
+var dropThisLocationsQuery = "DROP TABLE aalocations;";
+var dropThisTimeListTable =  "DROP TABLE aatimeLists;";
+
+client.query(dropThisLocationsQuery, (err, res) => {
+    console.log(err, res);
+    client.end();
+});
+
+client.query(dropThisTimeListTable, (err, res) => {
+    console.log(err, res);
+    client.end();
+});
+
+```
+
+* Part B: Inserting in to Tables [Full File Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/wa04_b.js)
+```js
+// Setup Address Files for inserting into DB
+var addressesForDb = JSON.parse(fs.readFileSync('../week7/data/concat_clean_final/locationList_all_zones_cleaned.json'));
+// '../week7/data/locationLists/locationList_zone09.json' --> test file with less data
+async.eachSeries(addressesForDb, function(value, callback) {
+    const client = new Client(db_credentials);
+    client.connect();
+    var thisLocationsQuery = "INSERT INTO aalocations VALUES (E'" + value.meetingID + "', E'" + value.streetAddress + "', E'" + value.city + "', E'" + value.state + "', E'" + value.zipCode + "', E'" + value.lat + "', E'" + value.lng + "', E'" + value.buildingName + "', E'" + value.wheelChairAccess + "', E'" + value.roomFloor + "', E'" + value.detailsBox + "');";
+    client.query(thisLocationsQuery, (err, res) => {
+        console.log(err, res);
+        client.end();
+    });
+    setTimeout(callback, 500); 
+}); 
+
+// Setup timeList Files for inserting into DB
+var timeListsForDb = JSON.parse(fs.readFileSync('../week7/data/concat_clean_final/timeList_all_zones_cleaned.json'));
+// '../week7/data/timeList/timeList_zone09.json' --> test file with less data
+async.eachSeries(timeListsForDb, function(value, callback) {
+    const client2 = new Client(db_credentials);
+    client2.connect();
+    var thisTimeListQuery = "INSERT INTO aatimeLists VALUES (E'" + value.meetingID + "', E'" + value.day + "', E'" + value.startTime + "', E'" + value.endTime + "', E'" + value.meetingType + "', E'" + value.specialInterest + "');";
+    client2.query(thisTimeListQuery, (err, res) => {
+        console.log(err, res);
+        client2.end();
+    });
+    setTimeout(callback, 1000); 
+}); 
+
+```
+* Part C: See if it was successful and returning [Full File Here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week4/wa04_c.js)
+
+```js
+// Connect to the AWS RDS Postgres database
+const client = new Client(db_credentials);
+client.connect();
+
+// Sample SQL statement to query the entire contents of a table: 
+var locationListQuery = "SELECT * FROM aalocations;";
+var timeListQuery = "SELECT * FROM aatimeLists;";
+
+
+client.query(locationListQuery, (err, res) => {
+    console.log(err, res.rows);
+    client.end();
+});
+
+client.query(timeListQuery, (err, res) => {
+    console.log(err, res.rows);
+    client.end();
+});
+
+
+
+```
+
+
 
 
 

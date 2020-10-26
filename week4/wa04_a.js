@@ -20,30 +20,30 @@ client.connect();
 // Creating the tables:
 ////////////////////////
 var thisLocationsQuery = "CREATE TABLE aalocations (meetingID integer, address varchar(120), city varchar(120), state varchar(2), zipCode varchar(20), lat double precision, lng double precision, buildingName varchar(200), wheelChairAccess boolean, roomFloor varchar(120), detailsBox varchar(250));";
-// var thisTimeListQuery = "CREATE TABLE aatimeLists (meetingID integer, day varchar(120), startTime time, endTime time, meetingType varchar(120), specialInterest varchar(255));";
+var thisTimeListQuery = "CREATE TABLE aatimeLists (meetingID integer, day varchar(120), startTime time, endTime time, meetingType varchar(120), specialInterest varchar(255));";
 
 client.query(thisLocationsQuery, (err, res) => {
+    console.log(err, res);
+    // client.end();
+});
+
+client.query(thisTimeListQuery, (err, res) => {
     console.log(err, res);
     client.end();
 });
 
-// client.query(thisTimeListQuery, (err, res) => {
-//     console.log(err, res);
-//     client.end();
-// });
-
 //////////////////////////
 //Dropping the tables
 //////////////////////////
-// var dropThisLocationsQuery = "DROP TABLE aalocations;";
-// // var dropThisTimeListTable =  "DROP TABLE aatimeLists;";
+var dropThisLocationsQuery = "DROP TABLE aalocations;";
+var dropThisTimeListTable =  "DROP TABLE aatimeLists;";
 
-// client.query(dropThisLocationsQuery, (err, res) => {
-//     console.log(err, res);
-//     client.end();
-// });
+client.query(dropThisLocationsQuery, (err, res) => {
+    console.log(err, res);
+    client.end();
+});
 
-// client.query(dropThisTimeListTable, (err, res) => {
-//     console.log(err, res);
-//     client.end();
-// });
+client.query(dropThisTimeListTable, (err, res) => {
+    console.log(err, res);
+    client.end();
+});

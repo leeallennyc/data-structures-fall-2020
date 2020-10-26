@@ -29,16 +29,16 @@ async.eachSeries(addressesForDb, function(value, callback) {
     setTimeout(callback, 500); 
 }); 
 
-// // Setup timeList Files for inserting into DB
-// var timeListsForDb = JSON.parse(fs.readFileSync('../week7/data/concat_clean_final/timeList_all_zones_cleaned.json'));
-// // '../week7/data/timeList/timeList_zone09.json' --> test file with less data
-// async.eachSeries(timeListsForDb, function(value, callback) {
-//     const client2 = new Client(db_credentials);
-//     client2.connect();
-//     var thisTimeListQuery = "INSERT INTO aatimeLists VALUES (E'" + value.meetingID + "', E'" + value.day + "', E'" + value.startTime + "', E'" + value.endTime + "', E'" + value.meetingType + "', E'" + value.specialInterest + "');";
-//     client2.query(thisTimeListQuery, (err, res) => {
-//         console.log(err, res);
-//         client2.end();
-//     });
-//     setTimeout(callback, 1000); 
-// }); 
+// Setup timeList Files for inserting into DB
+var timeListsForDb = JSON.parse(fs.readFileSync('../week7/data/concat_clean_final/timeList_all_zones_cleaned.json'));
+// '../week7/data/timeList/timeList_zone09.json' --> test file with less data
+async.eachSeries(timeListsForDb, function(value, callback) {
+    const client2 = new Client(db_credentials);
+    client2.connect();
+    var thisTimeListQuery = "INSERT INTO aatimeLists VALUES (E'" + value.meetingID + "', E'" + value.day + "', E'" + value.startTime + "', E'" + value.endTime + "', E'" + value.meetingType + "', E'" + value.specialInterest + "');";
+    client2.query(thisTimeListQuery, (err, res) => {
+        console.log(err, res);
+        client2.end();
+    });
+    setTimeout(callback, 1000); 
+}); 
