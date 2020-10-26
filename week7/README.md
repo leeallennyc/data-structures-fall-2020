@@ -470,25 +470,22 @@ client.query(timeListQuery, (err, res) => {
     console.log(err, res.rows);
     client.end();
 });
-
-
-
 ```
 
+* Output from call:
 
-
-
-
+![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week7/images/RDS_output_wa06_SQL.png?raw=true)
 
 ### Observations & Learnings
 * This was by far the greatest challenge we undertook to date. The collaborative nature of the assignment was benefical for all of us, and I hope we get to do this again on other assignments.
 * Cleaning and Preparing is really 90% of the work.
 * If you get stuck with one solution approach, stop and try a different approach.
-* Time is always a factor, and the extra time to complete this assignment was appreciated.
+* Time is always a factor, and the extra time to complete this assignment was appreciated greatly.
 
 ---
 ### Challenges / Opportunities
 * When collaborating, there are many different styles and differences in how people approach a problem. The opportunity is in how we bring everyone's unique abilities together.
+* Keeping track of all the changes and documenting the process.
 
 ### Additional / Readings for the week
 * Gitelman, Chapter 7
