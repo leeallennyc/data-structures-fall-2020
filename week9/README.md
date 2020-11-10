@@ -10,7 +10,7 @@ We used the same SQL database as our AA PostgresQL project from [week 4](https:/
 
 ### Process
 
-#### Step One - [File here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9a.js)
+### Step One - [File here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9a.js)
 * We setup our schema for our PostgresQL table using the following code:
 
 ```
@@ -41,7 +41,7 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
-#### Step Two - [File here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9_worker.js)
+### Step Two - [File here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9_worker.js)
 * Next we are establishing a connection with our database and inserting out temperature readings into the table we created. 
 ```
 javascript
@@ -99,7 +99,7 @@ var getAndWriteData = function() {
 setInterval(getAndWriteData, 300000);
 ```
 
-#### Step Three - [File here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9_checks.js)
+### Step Three - [File here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9_checks.js)
 * Here we check out work and output: 
 ``` js
 
