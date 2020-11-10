@@ -4,33 +4,15 @@
 Assignment 8 Details: [Week 8](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week8/week8_assignment.md) 
 
 ## Summary:
-The purpose of this assignment was to setup a IoT device and log the temperature sensor and humidity data. 
+The purpose of this assignment was to setup a IoT device and log the temperature sensor. 
 
 --- 
 
 ### Process
-* 
+* Setup was completed and URL generated for IoT sensor readings based on [Week 8](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week8/week8_assignment.md) 
 
 
-#### Step One
-* 
+#### Output of Device
+* The ID and Serial number are blocked out for security reasons. 
+![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week8/images/particle_board_readout.png?raw=true)
 
-#### Step Two
-* 
-
-
-#### Step Three 
-* 
-
-#### Step Four 
-* 
-
-### Observations & Learnings
-* 
-
----
-### Challenges / Opportunities
-* 
-
-### Additional / Readings for the week
-* 
