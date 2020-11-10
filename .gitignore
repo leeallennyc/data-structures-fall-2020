@@ -3,6 +3,7 @@ node_modules
 .gitignore
 .env
 .c9
+week9/ecosystem.config.js
 
 
 
