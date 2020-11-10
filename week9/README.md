@@ -4,6 +4,7 @@
 Assignment 9 Details: [Week 9](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week9/week9_assignment.md) 
 
 ## Summary:
+
 The purpose of this assignment was to create a new table for our sensor data and begin writing values to it at a frequency of **at least once every five minutes** (but no more than twice per minute). 
 We used the same SQL database as our AA PostgresQL project from [week 4](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week4)
 --- 
