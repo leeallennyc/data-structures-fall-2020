@@ -17,13 +17,16 @@ const client = new Client(db_credentials);
 client.connect();
 
 // Sample SQL statement to query meetings on Monday that start on or after 7:00pm: 
-var thisQuery = "SELECT address, lat, lng FROM aalocations WHERE address LIKE '%96th%' OR lat > 40.801;"
+var thisQuery = "SELECT COUNT(address) FROM aalocations;"
+
+// "SELECT address, lat, lng FROM aalocations WHERE address LIKE '%96th%' OR lat > 40.801;"
 
 // Returns Addresses for 96th Street or a lat over 40.801
 // address                              lat         long       
 // -----------------------------------  ----------  -----------
 // 207 West 96th Street, New York, NY   40.7945161  -73.9710419
 // 207 West 96th Street, New York, NY   40.7945161  -73.9710419
+
 // 221 West 107th Street, New York, NY  40.8017795  -73.9665393
 // 207 West 96th Street, New York, NY   40.7945161  -73.9710419
 // 601 West 114th Street, New York, NY  40.8069051  -73.965058 
@@ -39,7 +42,8 @@ var thisQuery = "SELECT address, lat, lng FROM aalocations WHERE address LIKE '%
 client.query(thisQuery, (err, res) => {
     if (err) {throw err}
     else {
-        console.table(res.rows);
+        // console.table(res.rows
+        console.log(res.rows);
         client.end();
     }
 });

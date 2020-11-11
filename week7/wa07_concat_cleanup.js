@@ -4,12 +4,12 @@ const fs = require('fs'),
       path = require('path');
       
       
-// // Read in the uncleaned LocationList File with all Zones and Clean All Location List Zones and Export as JSON file  
-// let locationList_all_zones_uncleaned = fs.readFileSync('./data/concat_clean_final/locationList_all_zones.json', 'utf8')
-// // console.log(locationList_all_zones_uncleaned);
-// let cleanedLocationsAll = (locationList_all_zones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
-// // console.log(cleanedLocationsAll);
-// fs.writeFileSync('./data/concat_clean_final/locationList_all_zones_cleaned.json', cleanedLocationsAll)      
+// Read in the uncleaned LocationList File with all Zones and Clean All Location List Zones and Export as JSON file  
+let locationList_all_zones_uncleaned = fs.readFileSync('./data/concat_clean_final/locationList_all_zones.json', 'utf8')
+// console.log(locationList_all_zones_uncleaned);
+let cleanedLocationsAll = (locationList_all_zones_uncleaned.toString().split('][').join(',').replace(/}\n/g,'}'));
+// console.log(cleanedLocationsAll);
+fs.writeFileSync('./data/concat_clean_final/locationList_all_zones_cleaned.json', cleanedLocationsAll)      
       
       
 

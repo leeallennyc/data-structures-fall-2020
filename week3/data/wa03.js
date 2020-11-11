@@ -74,13 +74,9 @@ for (let i = 0; i<filenames.length; i++){
 }, function() {
     // The below code splits the file extension name on .txt and renames a new file with .json as extension. 
     var templateString = `${__dirname}/complete_addresses/${filenames[i]}`
-    // console.log(templateString);
     var splitTxt = templateString.split(".");
-    // console.log(splitTxt);
     var removeTxt = splitTxt.pop();
-    // console.log(splitTxt);
     var pushJson = splitTxt.push('.json');
-    // console.log(splitTxt);
     var joinJson = splitTxt.join('');
     // console.log(joinJson);
     
