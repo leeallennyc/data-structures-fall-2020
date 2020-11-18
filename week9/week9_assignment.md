@@ -36,7 +36,7 @@ client.query(thisQuery, (err, res) => {
 });
 ```
 
-#### PART TWO
+#### PART TWO 
 
 In this assignment, you will write a script that will run continuously in the background to periodically get sensor values and insert them into your database (at a frequency of at least once every five minutes). You will continue to work in Cloud9 for this, however, you will need to change a default setting in Cloud9 to specify that you would like your server to run continuously (rather than shutting down after a period non-use, which is a cost-saving measure). To do this, go to to your Cloud9 environment editor, click the "AWS Cloud9" menu, and choose "Preferences." In the preferences under "EC2 Instance," choose "Never" from the "Stop my environment:" dropdown. 
 

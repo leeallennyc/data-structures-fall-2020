@@ -24,6 +24,7 @@ var secondQuery = "SELECT COUNT (*) FROM sensorData;"; // print the number of ro
 var thirdQuery = "SELECT sensorValue, COUNT (*) FROM sensorData GROUP BY sensorValue;"; // print the number of rows for each sensorValue
 
 client.query(thisQuery, (err, res) => {
+    
     if (err) {throw err}
     else {
     console.table(res.rows);
