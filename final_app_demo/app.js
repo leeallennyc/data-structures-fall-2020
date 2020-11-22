@@ -5,6 +5,7 @@ var AWS = require('aws-sdk');
 const moment = require('moment-timezone');
 const handlebars = require('handlebars');
 var fs = require('fs');
+const dotenv = require('dotenv');
 
 const indexSource = fs.readFileSync("templates/sensor.txt").toString();
 var template = handlebars.compile(indexSource, { strict: true });
@@ -128,12 +129,21 @@ app.get('/processblog', function(req, res) {
 
     // DynamoDB (NoSQL) query
     var params = {
-        TableName : "aaronprocessblog",
-        KeyConditionExpression: "topic = :topic", // the query expression
-        ExpressionAttributeValues: { // the query values
-            ":topic": {S: "cats"}
-        }
-    };
+    TableName : "processblog",
+    KeyConditionExpression: '#uid = :userIdName AND begins_with (entry_date_id, :entryDateVal)',
+    // :minDate and :maxDate"
+    ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
+        "#uid" : "user_id",
+    },
+    ExpressionAttributeValues: { // the query values
+        ":userIdName": {S: "LK_11"},
+        ":entryDateVal": {S: "November 10"},
+        // ":tag": {S:"Business Processes"},
+        // ":dayOfEntry": {S: "October 10 2020"},
+        // ":minDate": {N: new Date("October 6, 2020").valueOf().toString()},
+        // ":maxDate": {N: new Date("October 8, 2020").valueOf().toString()}
+    }
+};
 
     dynamodb.query(params, function(err, data) {
         if (err) {

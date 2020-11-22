@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Aaron's Process Blog</title>
-  <meta name="description" content="Aaron's Process Blog">
-  <meta name="author" content="Aaron Hill">
+  <title>Journal</title>
+  <meta name="description" content="Journal">
+  <meta name="author" content="Lee Kuczewski">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -17,12 +17,12 @@
 <script>
 var data = {{{pbdata}}} ; 
 
-var myTable = '<table><thead><tr><th>date</th><th>category</th><th>entry</th></tr></thead><tbody>';
+var myTable = '<table><thead><tr><th>User</th><th>Date of Entry</th><th>Entry</th></tr></thead><tbody>';
 
 for (var i=0; i < data.length; i++) {
 	myTable += '<tr>';
-	myTable += '<td>' + data[i].dt.N + '</td>';
-	myTable += '<td>' + data[i].topic.S + '</td>';
+	myTable += '<td>' + data[i].user_id.S + '</td>';
+	myTable += '<td>' + data[i].dayOfEntry.S + '</td>';
 	myTable += '<td>' + data[i].entry.S + '</td>';
 	myTable += '</tr>';
 
@@ -36,11 +36,11 @@ $(window).on('load', function() {
 
 </script>
 
-<h3>Aaron's process blog</h3>
+<h3>Journal</h3>
 
 <div id='myEntries'></div>
 
-<p><span class="blinking">My life is so interesting!</span></p>
+<p><span class="blinking">Returned Entries</span></p>
 
 </body>
 </html>

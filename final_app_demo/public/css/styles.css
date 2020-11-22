@@ -1,16 +1,22 @@
 #mapid { height: 760px; }
 
+body {
+  background-color: navy;
+}
+
 table {
   border-collapse: collapse;
   font-family: sans-serif;
+  color: floralwhite;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid red;
 }
 
 h3, p {
-    font-family: sans-serif;
+    font-family: verdana;
+    color: floralwhite;
 }
 
 p {
@@ -25,6 +31,10 @@ td {
   padding-right:12px;
   padding-top:5px;
 }
+
+/*div {*/
+  
+/*}*/
 
 .blinking{
     animation:blinkingText 1.5s linear infinite;

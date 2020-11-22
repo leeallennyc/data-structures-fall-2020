@@ -1,88 +1,62 @@
-## App Demo: Final Assignments 1, 2, and 3
+# Final App Demo 
+---
+Final App Demo Details: [Final Demo App](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo) 
 
-Using:
+## Summary:
+The purpose of this assignment was to provide a foundation for final assignment 1, 2, and 3. 
 
-* Node.js (in Cloud 9, for now. Deployment options covered later.)  
-* [Express](https://expressjs.com/)  
+--- 
+### Process
 
-### Final Assignment 1: AA Map
-
-Using: 
-
-* A [mapbox account](https://account.mapbox.com/)  
-* [Leaflet](https://leafletjs.com/examples/quick-start/)  
-* [Moment](https://momentjs.com/timezone/docs/) (for working with Time Zones)
-
-### Final Assignment 2: Sensor Data
-
-Using: 
-
-* [D3.js (version 3)](https://github.com/d3/d3-3.x-api-reference/blob/master/API-Reference.md)
-* [Handlebars](https://handlebarsjs.com/) (for [templating](https://github.com/visualizedata/data-structures/blob/master/final_code_demo/templates/sensor.txt))
-
-```javascript
-app.get('/temperature', function(req, res) {
-
-    // Connect to the AWS RDS Postgres database
-    const client = new Pool(db_credentials);
-
-    // SQL query 
-    var q = `SELECT EXTRACT(DAY FROM sensorTime) as sensorday,
-             AVG(sensorValue::int) as num_obs
-             FROM sensorData
-             GROUP BY sensorday
-             ORDER BY sensorday;`;
-
-    client.connect();
-    client.query(q, (qerr, qres) => {
-        if (qerr) { throw qerr }
-        else {
-            res.end(template({ sensordata: JSON.stringify(qres.rows)}));
-            client.end();
-            console.log('1) responded to request for sensor graph');
-        }
-    });
-}); 
+#### Final Assignment 1 (AA Meetings Map)
+* 
+ 
+#### Final Assignment 2 (Process Blog)
+* For the Process blog, I input my credentials from [week 5](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/wa05_b.js)
+* Adapting the params of the query for the blog, I input the following:
+```js
+var params = {
+    TableName : "processblog",
+    KeyConditionExpression: '#uid = :userIdName AND begins_with (entry_date_id, :entryDateVal)',
+    // :minDate and :maxDate"
+    ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
+        "#uid" : "user_id",
+    },
+    ExpressionAttributeValues: { // the query values
+        ":userIdName": {S: "LK_11"},
+        ":entryDateVal": {S: "November 10"},
+        // ":tag": {S:"Business Processes"},
+        // ":dayOfEntry": {S: "October 10 2020"},
+        // ":minDate": {N: new Date("October 6, 2020").valueOf().toString()},
+        // ":maxDate": {N: new Date("October 8, 2020").valueOf().toString()}
+    }
+};
 ```
+* Next, I modified the [pb.txt](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/pb.txt) file.
+```js
+var myTable = '<table><thead><tr><th>User</th><th>Date of Entry</th><th>Entry</th></tr></thead><tbody>';
 
+for (var i=0; i < data.length; i++) {
+	myTable += '<tr>';
+	myTable += '<td>' + data[i].user_id.S + '</td>';
+	myTable += '<td>' + data[i].dayOfEntry.S + '</td>';
+	myTable += '<td>' + data[i].entry.S + '</td>';
+	myTable += '</tr>';
+}
 
-### Final Assignment 3: Process Blog
-
-Using: 
-
-* [JQuery](https://jquery.com/)  
-* [Handlebars](https://handlebarsjs.com/) for the [template](https://github.com/visualizedata/data-structures/blob/master/final_code_demo/templates/pb.txt)  
-* [AWS SDK for JavaScript](https://aws.amazon.com/sdk-for-node-js/)  
-
-```javascript
-app.get('/processblog', function(req, res) {
-    // AWS DynamoDB credentials
-    AWS.config = new AWS.Config();
-    AWS.config.region = "us-east-1";
-
-    // Connect to the AWS DynamoDB database
-    var dynamodb = new AWS.DynamoDB();
-
-    // DynamoDB (NoSQL) query
-    var params = {
-        TableName : "processblog-new",
-        KeyConditionExpression: "pk = :primaryKey", // the query expression
-        ExpressionAttributeValues: { // the query values
-            ":primaryKey": {S: "teaching"}
-        }
-    };
-
-    dynamodb.query(params, function(err, data) {
-        if (err) {
-            console.error("Unable to query. Error:", JSON.stringify(err, null, 2));
-            throw (err);
-        }
-        else {
-            res.end(pbtemplate({ pbdata: JSON.stringify(data.Items)}));
-            console.log('3) responded to request for process blog data');
-        }
-    });
-});
 ```
+* The output from the table and returned information from DynamoDB:
+![](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo/images/Dynamo_table.png?raw=true)
+
+
+#### Final Assignment 3 (IoT Temperature Sensor Data)
+* 
+
+
+### Observations & Learnings
+* 
+---
+### Challenges / Opportunities Next Steps
+* 
 
 
