@@ -46,7 +46,7 @@ for (var i=0; i < data.length; i++) {
 
 ```
 * The output from the table and returned information from DynamoDB:
-![](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo/images/Dynamo_table.png?raw=true)
+![](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Dynamo_table.png?raw=true)
 
 
 #### Final Assignment 3 (IoT Temperature Sensor Data)
