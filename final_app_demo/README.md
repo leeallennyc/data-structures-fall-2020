@@ -9,8 +9,8 @@ The purpose of this assignment was to provide a foundation for final assignment 
 ### Process
 
 #### Final Assignment 1 (AA Meetings Map)
-* After a few days of troubleshooting, I can to realize that I need to add the `dotenv.config();` after requiring the `const dotenv = require('dotenv');` -- this took me some time to figure out.
-* For this sample of the AA Map, I changed the sample query to one where I could test a few locations:
+* After a few days of troubleshooting, I came to realize that I needed to add the `dotenv.config();` after requiring the `const dotenv = require('dotenv');` -- this took me some time to figure out.
+* For this sample of the AA Map, I changed the sample query to one where I could test a few locations above a certain latitude:
 ```js
  var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
                     FROM aalocations 
@@ -75,7 +75,7 @@ var yAxis = d3.svg.axis()
         return d+"F";
     }); 
 ```
-* Once there were achieved, I made small changes to the styling and changed the text format to Degrees Fahrenheit. I will continue to work on adapting the query to incorporate outdoor temperature:
+* Once those were achieved, I made small changes to the styling and changed the text format to Degrees Fahrenheit. I will continue to work on adapting the query to incorporate outdoor temperature:
 ```js
   // SQL query 
     var q = `SELECT EXTRACT(DAY FROM sensorTime) as sensorday,
@@ -91,7 +91,7 @@ var yAxis = d3.svg.axis()
 
 ### Observations & Learnings
 * More time is necessary to better understand the SQL queries in Postgres.
-* Additional sketches may be need for the schema design.
+* Additional sketches may be needed for the schema design in all Projects.
 ---
 ### Challenges / Opportunities Next Steps
 * These are sketches for the final. More to come. 
