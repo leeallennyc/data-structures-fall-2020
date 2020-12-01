@@ -1,11 +1,13 @@
 var express = require('express'), 
     app = express();
 const { Pool } = require('pg');
-var AWS = require('aws-sdk');
+const AWS = require('aws-sdk');
 const moment = require('moment-timezone');
 const handlebars = require('handlebars');
-var fs = require('fs');
+const fs = require('fs');
+const querystring = require('querystring');
 const dotenv = require('dotenv');
+dotenv.config();
 
 const indexSource = fs.readFileSync("templates/sensor.txt").toString();
 var template = handlebars.compile(indexSource, { strict: true });
@@ -56,7 +58,7 @@ var jx = `;
     }).addTo(mymap);
 
     for (var i=0; i<data.length; i++) {
-        L.marker( [data[i].lat, data[i].lon] ).bindPopup(JSON.stringify(data[i].meetings)).addTo(mymap);
+        L.marker( [data[i].lat, data[i].lng] ).bindPopup(JSON.stringify(data[i].meetings)).addTo(mymap);
     }
     </script>
     </body>
@@ -78,23 +80,32 @@ app.get('/aa', function(req, res) {
     const client = new Pool(db_credentials);
     
     // SQL query 
-    var thisQuery = `SELECT lat, lon, json_agg(json_build_object('loc', mtglocation, 'address', mtgaddress, 'time', tim, 'name', mtgname, 'day', day, 'types', types, 'shour', shour)) as meetings
-                 FROM aadatall 
-                 WHERE day = ` + dayy + 'and shour >= ' + hourr + 
-                 `GROUP BY lat, lon
-                 ;`;
+    // var thisQuery = `SELECT lat, lon, json_agg(json_build_object('loc', mtglocation, 'address', mtgaddress, 'time', tim, 'name', mtgname, 'day', day, 'types', types, 'shour', shour)) as meetings
+    //          FROM aadatall 
+    //          WHERE day = ` + dayy + 'and shour >= ' + hourr + 
+    //         `GROUP BY lat, lon
+    //         ;`;
+
+                 
+    var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
+                    FROM aalocations 
+                    WHERE address LIKE '%96th%' OR lat > 40.801
+                    GROUP BY lat, lng;`;
 
     client.query(thisQuery, (qerr, qres) => {
         if (qerr) { throw qerr }
         
         else {
             var resp = hx + JSON.stringify(qres.rows) + jx;
+            console.log(resp);
             res.send(resp);
             client.end();
             console.log('2) responded to request for aa meeting data');
         }
     });
 });
+
+
 
 app.get('/temperature', function(req, res) {
 

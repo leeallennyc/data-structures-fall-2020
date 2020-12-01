@@ -16,7 +16,7 @@ body {
 }
 
 .bar {
-  fill: orange;
+  fill: navy;
 }
 
 .bar:hover {
@@ -66,28 +66,35 @@ var margin = {top: 40, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var formatPercent = d3.format(".0%");
+var formatNumber = d3.format(".1f");
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, width], .1);
 
 var y = d3.scale.linear()
     .range([height, 0]);
-
+    
+   
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
 
+    
 var yAxis = d3.svg.axis()
     .scale(y)
-    .orient("left")
-    .tickFormat(formatPercent);
+    .orient('left')
+    .ticks(10)
+    .tickFormat(function(d){
+        return d+"F";
+    });  
+    
+    
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-    return "<strong>Percentage:</strong> <span style='color:red'>" + formatPercent(d.num_obs) + "</span>";
+    return "<strong>Degrees F:</strong> <span style='color:red'>" + formatNumber(d.num_obs) + "</span>";
   })
 
 var svg = d3.select("body").append("svg")
@@ -114,7 +121,7 @@ svg.call(tip);
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Percentage");
+      .text("Degrees F");
 
   svg.selectAll(".bar")
       .data(data)
