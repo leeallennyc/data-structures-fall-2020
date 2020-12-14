@@ -19,9 +19,10 @@ table, th, td {
 }
 
 h3, p {
-    font-family: verdana;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;;
     color: red;
     text-align: center;
+    margin: 20px;
 }
 
 p {
@@ -37,28 +38,46 @@ td {
   padding-top:5px;
 }
 
+#myInput {
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
 
+.form-control{
+  width: 25%;
+  margin-left: 20px;
+}
+
+.dropdown-item{
+  border-collapse: collapse;
+}
 
 .grid-container {
   display: grid;
-  grid-template-columns: 15% 20% 20% 20% 20%;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
   grid-template-rows: 15%;
   grid-gap: 1rem;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 
 .grid-container > div {
-  height: auto;
-  background-color: red;
+  background-color: white;
+  border: solid 1px;
+  border-color: red;
   text-align:center;
-  grid-gap: 25px;
   padding: 5px;
   margin: 5px;
   font-size: 16px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
+
 
 .blinking{
     animation:blinkingText 1.5s linear infinite;

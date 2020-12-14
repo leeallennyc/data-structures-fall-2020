@@ -135,7 +135,7 @@ app.get('/processblog', function(req, res) {
     AWS.config = new AWS.Config();
     AWS.config.region = "us-east-1";
     console.log(req.query.type);
-    var topic = "LK_06";
+    var topic = "LK_10";
     if (["LK_06","LK_08","LK_09","LK_10","LK_11","LK_12"].includes(req.query.type)) {
         topic = req.query.type;
 }

@@ -60,6 +60,24 @@ for (var i=0; i < data.length; i++) {
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Starter_Journal.png" alt="Journal" title="Journal" width=80% height=80% />
 
+* After cleaning up the files, and incorporating CSS grid, also updated the queries for calling back differnt User_Ids and month.
+```js
+app.get('/processblog', function(req, res) {
+    // AWS DynamoDB credentials
+    AWS.config = new AWS.Config();
+    AWS.config.region = "us-east-1";
+    console.log(req.query.type);
+    var topic = "LK_10";
+    if (["LK_06","LK_08","LK_09","LK_10","LK_11","LK_12"].includes(req.query.type)) {
+        topic = req.query.type;
+}
+```
+
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2_wo.png" alt="Journal" title="Journal" width=80% height=80% />
+* and Updated UUIDs to designate and track duplicates for future entry tracking and filter. 
+
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=30% height=30% />
+
 
 #### Final Assignment 3 (IoT Temperature Sensor Data)
 * For Final Assignment 3, I first began to make edits to the [sensor.txt file](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/sensor.txt)
