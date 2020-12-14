@@ -1,10 +1,10 @@
 var express = require('express'), 
     app = express();
 const { Pool } = require('pg');
-const AWS = require('aws-sdk');
+var AWS = require('aws-sdk');
 const moment = require('moment-timezone');
 const handlebars = require('handlebars');
-const fs = require('fs');
+var fs = require('fs');
 const querystring = require('querystring');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -134,6 +134,12 @@ app.get('/processblog', function(req, res) {
     // AWS DynamoDB credentials
     AWS.config = new AWS.Config();
     AWS.config.region = "us-east-1";
+    console.log(req.query.type);
+    var topic = "LK_06";
+    if (["LK_06","LK_08","LK_09","LK_10","LK_11","LK_12"].includes(req.query.type)) {
+        topic = req.query.type;
+}
+    
 
     // Connect to the AWS DynamoDB database
     var dynamodb = new AWS.DynamoDB();
@@ -141,15 +147,18 @@ app.get('/processblog', function(req, res) {
     // DynamoDB (NoSQL) query
     var params = {
     TableName : "processblog",
-    KeyConditionExpression: '#uid = :userIdName AND begins_with (entry_date_id, :entryDateVal)',
+    KeyConditionExpression: '#uid = :userIdName',
+    // AND begins_with (entry_date_id, :entryDateVal)'
     // :minDate and :maxDate"
     ExpressionAttributeNames: { // name substitution, used for reserved words in DynamoDB
         "#uid" : "user_id",
     },
     ExpressionAttributeValues: { // the query values
-        ":userIdName": {S: "LK_11"},
-        ":entryDateVal": {S: "November 10"},
-        // ":tag": {S:"Business Processes"},
+        // ":userIdName": {S: "LK_11"},
+        // ":entryDateVal": {S: "November 10"},
+        ":userIdName": {S: topic},
+        
+        // ":tag": {S:"Business Processes"}
         // ":dayOfEntry": {S: "October 10 2020"},
         // ":minDate": {N: new Date("October 6, 2020").valueOf().toString()},
         // ":maxDate": {N: new Date("October 8, 2020").valueOf().toString()}

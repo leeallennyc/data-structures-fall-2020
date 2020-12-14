@@ -16,21 +16,21 @@
 <script>
 var data = {{{pbdata}}} ; 
 
-var myTable = '<table><thead><tr><th>User</th><th>Date of Entry</th><th>Entry</th></tr></thead><tbody>';
+var myGrid = '<div class="grid-container"><div class ="item1">User</div><div class ="item2">Entry Date</div><div class ="item3">Title</div><div class = "item4">Entry</div><div class = "item5">Tag</div>';
 
 for (var i=0; i < data.length; i++) {
-	myTable += '<tr>';
-	myTable += '<td>' + data[i].user_id.S + '</td>';
-	myTable += '<td>' + data[i].dayOfEntry.S + '</td>';
-	myTable += '<td>' + data[i].entry.S + '</td>';
-	myTable += '</tr>';
+	myGrid += '<div class = "item1">' + data[i].user_id.S + '</div>';
+	myGrid += '<div class = "item2">' + data[i].dayOfEntry.S + '</div>';
+	myGrid += '<div class = "item3">' + data[i].title.S + '</div>';
+	myGrid += '<div class = "item4">' + data[i].entry.S + '</div>';
+	myGrid += '<div class = "item5">' + data[i].tag.S + '</div>';
 
 }
 
-myTable += '</body></table>'
+myGrid += '</body></div>'
 
 $(window).on('load', function() {
-  $("#myEntries").html(myTable)
+  $("#myEntries").html(myGrid)
 });
 
 </script>

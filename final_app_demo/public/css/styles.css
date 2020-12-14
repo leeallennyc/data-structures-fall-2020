@@ -1,7 +1,8 @@
 #mapid { height: 760px; }
 
 body {
-  background-color: navy;
+  background-color: floralwhite;
+  
   /*display: grid;*/
   /*grid-template-rows:    repeat(4, 100px);*/
   /*grid-template-columns: repeat(3, 1fr);*/
@@ -19,7 +20,8 @@ table, th, td {
 
 h3, p {
     font-family: verdana;
-    color: floralwhite;
+    color: red;
+    text-align: center;
 }
 
 p {
@@ -35,9 +37,28 @@ td {
   padding-top:5px;
 }
 
-/*div {*/
-  
-/*}*/
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 15% 20% 20% 20% 20%;
+  grid-template-rows: 15%;
+  grid-gap: 1rem;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.grid-container > div {
+  height: auto;
+  background-color: red;
+  text-align:center;
+  grid-gap: 25px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 15px;
+}
 
 .blinking{
     animation:blinkingText 1.5s linear infinite;

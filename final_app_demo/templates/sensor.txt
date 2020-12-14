@@ -11,7 +11,7 @@ body {
 .axis path,
 .axis line {
   fill: none;
-  stroke: #000;
+  stroke: red;
   shape-rendering: crispEdges;
 }
 
@@ -24,7 +24,8 @@ body {
 }
 
 .x.axis path {
-  display: none;
+  display: solid;
+  stroke: red;
 }
 
 .d3-tip {
@@ -62,9 +63,10 @@ body {
 
 var data = {{{sensordata}}} ; 
 
+
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 300 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(".1f");
 
@@ -88,8 +90,7 @@ var yAxis = d3.svg.axis()
         return d+"F";
     });  
     
-    
-
+  
 var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
@@ -130,7 +131,7 @@ svg.call(tip);
       .attr("x", function(d) { return x(d.sensorday); })
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.num_obs); })
-      .attr("height", function(d) { return height - y(d.num_obs); })
+      .attr("height", function(d) { return height -225; })
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide)
 
