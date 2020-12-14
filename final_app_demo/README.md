@@ -76,7 +76,7 @@ app.get('/processblog', function(req, res) {
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2_wo.png" alt="Journal" title="Journal" width=80% height=80% />
 * and Updated UUIDs to designate and track duplicates for future entry tracking and filter. 
 
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=30% height=30% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=80% height=80% />
 
 
 #### Final Assignment 3 (IoT Temperature Sensor Data)
