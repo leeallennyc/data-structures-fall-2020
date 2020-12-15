@@ -3,28 +3,36 @@
 Final App Demo Details: [Final Demo App](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo) 
 
 ## Summary:
-The purpose of this assignment was to provide a foundation for final assignment 1, 2, and 3. 
+The purpose is to provide an overview and summary of work for final assignments 1, 2, and 3. 
 
 --- 
-### Process
 
-#### Final Assignment 1 (AA Meetings Map)
-* After a few days of troubleshooting, I came to realize that I needed to add the `dotenv.config();` after requiring the `const dotenv = require('dotenv');` -- this took me some time to figure out.
-* For this sample of the AA Map, I changed the sample query to one where I could test a few locations above a certain latitude:
+#### Final Assignment 1 (AA Meetings Map) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment1/final_assignment_1.md) 
+
+* This assignment is a culmination of work from [week 1](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week1), [week 2](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week2), [week 3](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3), [week 4](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week4), [week 6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week 7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week 10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week 11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week11). 
+* Our goal was to re-architect an Alcoholics Anonymous map based application, from scraping `.txt` and `.html` files, cleaning and reorganizing to JSON format, and inserting our data into A PostgreSQL database. Details from each week are included above, this represents a high level overview of where the project currently is.  
+
+* At the moment, I'm working through how to connect the front and backends, and am having trouble with connecting user inputs to the client view. It seems as though I'm missing a critcal piece to make this interactive with user input.
+
+* For this current view of the AA Map, I changed the sample query to one where I could test a few locations above a certain latitude:
 ```js
  var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
                     FROM aalocations 
                     WHERE address LIKE '%96th%' OR lat > 40.801
                     GROUP BY lat, lng;`;
 ```
-* The current sample of the map looks like this:
+* The current view of the map:
+* At the moment, I'm having trouble with connecting the database queries with the front end in Leaflet.js -- resulting in problems with the project being dynamic for user input.
+* I will continue working on this connection -- by using either an AJAX request, AWS lambda function and endpoint, or other process. 
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/AA_starterMap.png" alt="Map" title="Map" width=80% height=80% />
 
  
-#### Final Assignment 2 (Process Blog)
-* For the Process blog, I input my credentials from [week 5](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/wa05_b.js)
-* Adapting the params of the query for the blog, I input the following:
+#### Final Assignment 2 (Process Blog) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment2/final_assignment_2.md) 
+
+* The process blog is a culmination of work from [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5), [week6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week11)
+* Our goal was to establish blog entry, and input those entries into a [DynamoDB database on AWS](https://aws.amazon.com/dynamodb/). 
+* After adapting the params from [week 5](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/wa05_b.js), I worked to create a frontend view to place this data in:
 ```js
 var params = {
     TableName : "processblog",
@@ -43,24 +51,8 @@ var params = {
     }
 };
 ```
-* Next, I modified the [pb.txt](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/pb.txt) file.
-```js
-var myTable = '<table><thead><tr><th>User</th><th>Date of Entry</th><th>Entry</th></tr></thead><tbody>';
 
-for (var i=0; i < data.length; i++) {
-	myTable += '<tr>';
-	myTable += '<td>' + data[i].user_id.S + '</td>';
-	myTable += '<td>' + data[i].dayOfEntry.S + '</td>';
-	myTable += '<td>' + data[i].entry.S + '</td>';
-	myTable += '</tr>';
-}
-
-```
-* The output from the table and returned information from DynamoDB.
-
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Starter_Journal.png" alt="Journal" title="Journal" width=80% height=80% />
-
-* After cleaning up the files, and incorporating CSS grid, also updated the queries for calling back differnt User_Ids and month.
+* Cleaning up the files, incorporating CSS grid, also updated the queries for calling back different userid's and month. [pb.txt](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/pb.txt).
 ```js
 app.get('/processblog', function(req, res) {
     // AWS DynamoDB credentials
@@ -72,17 +64,37 @@ app.get('/processblog', function(req, res) {
         topic = req.query.type;
 }
 ```
+```js
+var data = {{{pbdata}}} ; 
 
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2_wo.png" alt="Journal" title="Journal" width=80% height=80% />
-* and Updated UUIDs to designate and track duplicates for future entry tracking and filter. 
+var myGrid = '<div class="grid-container"><div>User</div><div>Entry Date</div><div>Title</div><div>Entry</div><div>Tag</div><div>Unique ID</div>';
+
+for (var i=0; i < data.length; i++) {
+	myGrid += '<div id = "item1">' + data[i].user_id.S + '</div>';
+	myGrid += '<div id = "item2">' + data[i].dayOfEntry.S + '</div>';
+	myGrid += '<div id = "item3">' + data[i].title.S + '</div>';
+	myGrid += '<div id = "item4">' + data[i].entry.S + '</div>';
+	myGrid += '<div id = "item5">' + data[i].tag.S + '</div>';
+	myGrid += '<div id = "item6">' + data[i].unique_id.S + '</div>';
+}
+
+myGrid += '</div>'
+
+$(window).on('load', function() {
+  $("#myEntries").html(myGrid)
+});
+
+```
+* A work in progress to be continued. The output from the table and returned information from DynamoDB -- adding a UUID column for future filtering:
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=80% height=80% />
 
 
-#### Final Assignment 3 (IoT Temperature Sensor Data)
-* For Final Assignment 3, I first began to make edits to the [sensor.txt file](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/sensor.txt)
-* First order of business was to change the `var formatPercent` to `var formatNumber = d3.format(".1f");` to get the appropriate response back for formatting numbers.
-* Next was to incorporate the proper tick format on the Y axis:
+#### Final Assignment 3 (IoT Temperature Sensor Data) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment3/final_assignment_3.md) 
+* Final Assignment was a culmination of work from [week 8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week9](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week9), [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week11), and [week12](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week12)
+* The purpose of this project was to connect an IoT temperature sensor, and send the values to our AWS PostgreSQL Database, which we setup for Project 1, then filter and visualize the data on the frontend using D3.js.
+* After incorporating a number of changes to the template [sensor.txt file](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/sensor.txt), I was able able to create an a representation of the data as a series of small bars.
+* My next goal is to create comparision range of outdoor temperatures for the same period, as designed for in [week 10](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week10/images/Temperature_sensing_Sketch.png). 
 ```js
 
 var yAxis = d3.svg.axis()
@@ -93,7 +105,6 @@ var yAxis = d3.svg.axis()
         return d+"F";
     }); 
 ```
-* Once those were achieved, I made small changes to the styling and changed the text format to Degrees Fahrenheit. I will continue to work on adapting the query to incorporate outdoor temperature:
 ```js
   // SQL query 
     var q = `SELECT EXTRACT(DAY FROM sensorTime) as sensorday,
@@ -102,16 +113,15 @@ var yAxis = d3.svg.axis()
              GROUP BY sensorday
              ORDER BY sensorday;`;
 ```
-* Current state:
+* Current state of the visualization:
 
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Sensor_Starter.png" alt="Sensor" title="Sensor" width=80% height=80% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Sensor_temp.png" alt="Sensor" title="Sensor" width=80% height=80%/>
 
-
-### Observations & Learnings
-* More time is necessary to better understand the SQL queries in Postgres.
-* Additional sketches may be needed for the schema design in all Projects.
 ---
-### Challenges / Opportunities Next Steps
-* These are sketches for the final. More to come. 
+
+### Observations & Learnings & Opportunities
+* The endpoint integration and connecting the front and backends was the biggest uncovered question for me. 
+* An additional week or so for understanding how AWS lambda, and API endpoints, or possibly using AJAX requests to integrate would have been tremendously helpful to finalize the project. 
+* I will plan to continue working on this integration piece after the semester is over. 
 
 

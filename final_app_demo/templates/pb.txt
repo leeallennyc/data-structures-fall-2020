@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Journal</title>
+  <title>JOURNAL</title>
   <meta name="description" content="Journal">
   <meta name="author" content="Lee Kuczewski">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-
 </head>
 
 <body>
@@ -16,18 +16,18 @@
 <script>
 var data = {{{pbdata}}} ; 
 
-var myGrid = '<div class="grid-container"><div class ="item1">User</div><div class ="item2">Entry Date</div><div class ="item3">Title</div><div class = "item4">Entry</div><div class = "item5">Tag</div>';
+var myGrid = '<div class="grid-container"><div>User</div><div>Entry Date</div><div>Title</div><div>Entry</div><div>Tag</div><div>Unique ID</div>';
 
 for (var i=0; i < data.length; i++) {
-	myGrid += '<div class = "item1">' + data[i].user_id.S + '</div>';
-	myGrid += '<div class = "item2">' + data[i].dayOfEntry.S + '</div>';
-	myGrid += '<div class = "item3">' + data[i].title.S + '</div>';
-	myGrid += '<div class = "item4">' + data[i].entry.S + '</div>';
-	myGrid += '<div class = "item5">' + data[i].tag.S + '</div>';
-
+	myGrid += '<div id = "item1">' + data[i].user_id.S + '</div>';
+	myGrid += '<div id = "item2">' + data[i].dayOfEntry.S + '</div>';
+	myGrid += '<div id = "item3">' + data[i].title.S + '</div>';
+	myGrid += '<div id = "item4">' + data[i].entry.S + '</div>';
+	myGrid += '<div id = "item5">' + data[i].tag.S + '</div>';
+	myGrid += '<div id = "item6">' + data[i].unique_id.S + '</div>';
 }
 
-myGrid += '</body></div>'
+myGrid += '</div>'
 
 $(window).on('load', function() {
   $("#myEntries").html(myGrid)
@@ -35,11 +35,32 @@ $(window).on('load', function() {
 
 </script>
 
-<h3>Journal</h3>
+<h3>JOURNAL</h3>
+<!--<h4>-->
+<!--  <div class="dropdown">-->
+<!--    <button class="btn dropdown-toggle" data-toggle="dropdown">-->
+<!--      Search User_ID-->
+<!--    </button>-->
+<!--    <div class="dropdown-menu">-->
+<!--      <a href="#" class="dropdown-item">LK_06</a>-->
+<!--      <a href="#" class="dropdown-item">LK_08</a>-->
+<!--      <a href="#" class="dropdown-item">LK_10</a>-->
+<!--      <a href="#" class="dropdown-item">LK_11</a>-->
+<!--      <a href="#" class="dropdown-item">LK_12</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</h4>-->
+<div class="md-form mt-0">
+  <input class="form-control" type="text" onkeyup="myFuction()" placeholder="Search for User ID" aria-label="Search">
+</div>
 
 <div id='myEntries'></div>
 
-<p><span class="blinking">Returned Entries</span></p>
-
+<!--<p><span class="blinking">Returned Entries</span></p>-->
+      
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"crossorigin="anonymous"></script>   
 </body>
 </html>

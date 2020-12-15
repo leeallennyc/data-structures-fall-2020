@@ -89,7 +89,7 @@ app.get('/aa', function(req, res) {
                  
     var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
                     FROM aalocations 
-                    WHERE address LIKE '%96th%' OR lat > 40.801
+                    WHERE address LIKE '%42nd%' OR lat > 40.75 
                     GROUP BY lat, lng;`;
 
     client.query(thisQuery, (qerr, qres) => {
@@ -154,10 +154,8 @@ app.get('/processblog', function(req, res) {
         "#uid" : "user_id",
     },
     ExpressionAttributeValues: { // the query values
-        // ":userIdName": {S: "LK_11"},
-        // ":entryDateVal": {S: "November 10"},
         ":userIdName": {S: topic},
-        
+        // ":entryDateVal": {S: "November 10"},
         // ":tag": {S:"Business Processes"}
         // ":dayOfEntry": {S: "October 10 2020"},
         // ":minDate": {N: new Date("October 6, 2020").valueOf().toString()},
