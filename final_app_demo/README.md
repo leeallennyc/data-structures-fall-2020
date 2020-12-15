@@ -116,15 +116,16 @@ var yAxis = d3.svg.axis()
              GROUP BY sensorday
              ORDER BY sensorday;`;
 ```
-* Current state of the visualization:
+* Current state of the visualization, and again -- trying to understand how to incorporate user input for dynamic view:
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Sensor_temp.png" alt="Sensor" title="Sensor" width=80% height=80%/>
 
 ---
 
 ### Observations & Learnings & Opportunities
-* The endpoint integration and connecting the front and backends was the biggest uncovered question for me. 
+* The endpoint integration and connecting the front and backends was the biggest challenge / material.  
 * An additional week or so for understanding how AWS lambda, and API endpoints, or possibly using AJAX requests to integrate would have been tremendously helpful to finalize the project. 
-* I will plan to continue working on this integration piece after the semester is over. 
+* I will plan to continue working on this integration piece after the semester is over, and update my documentation accordingly.
 
 
+ 
