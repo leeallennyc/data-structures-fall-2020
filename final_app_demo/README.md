@@ -9,8 +9,8 @@ The purpose is to provide an overview and summary of work for final assignments 
 
 #### Final Assignment 1 (AA Meetings Map) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment1/final_assignment_1.md) 
 
-* This assignment is a culmination of work from [week 1](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week1), [week 2](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week2), [week 3](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3), [week 4](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week4), [week 6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week 7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week 10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week 11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week11). 
-* Our goal was to re-architect an Alcoholics Anonymous map based application, from scraping `.txt` and `.html` files, cleaning and reorganizing to JSON format, and inserting our data into A PostgreSQL database. Details from each week are included above, this represents a high level overview of where the project currently is.  
+* This assignment is a culmination of work from [week 1](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week1), [week 2](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week2), [week 3](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3), [week 4](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week4), [week 6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week 7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week 10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week 11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo). 
+* Our goal was to re-architect an Alcoholics Anonymous map based application, from scraping `.txt` and `.html` files, cleaning and reorganizing to JSON format, and inserting our data into a PostgreSQL database. Details from each week are included above, this represents a high level overview of where the project currently is.  
 
 * At the moment, I'm working through how to connect the front and backends, and am having trouble with connecting user inputs to the client view. It seems as though I'm missing a critcal piece to make this interactive with user input.
 
@@ -23,14 +23,15 @@ The purpose is to provide an overview and summary of work for final assignments 
 ```
 * The current view of the map:
 * At the moment, I'm having trouble with connecting the database queries with the front end in Leaflet.js -- resulting in problems with the project being dynamic for user input.
-* I will continue working on this connection -- by using either an AJAX request, AWS lambda function and endpoint, or other process. 
+* I will continue working on this connection -- by using either an AJAX request, AWS lambda function and Amazon API Gateway, or other process. 
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/AA_starterMap.png" alt="Map" title="Map" width=80% height=80% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/96th_map.png" alt="Map" title="Map" width=80% height=80% />
 
  
 #### Final Assignment 2 (Process Blog) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment2/final_assignment_2.md) 
 
-* The process blog is a culmination of work from [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5), [week6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week11)
+* The process blog is a culmination of work from [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5), [week6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)
 * Our goal was to establish blog entry, and input those entries into a [DynamoDB database on AWS](https://aws.amazon.com/dynamodb/). 
 * After adapting the params from [week 5](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week5/wa05_b.js), I worked to create a frontend view to place this data in:
 ```js
@@ -85,13 +86,15 @@ $(window).on('load', function() {
 });
 
 ```
-* A work in progress to be continued. The output from the table and returned information from DynamoDB -- adding a UUID column for future filtering:
+* A work in progress. The output from the table and returned data from DynamoDB -- adding a UUID column for future filtering:
+* At the moment the URL query statement `?type=LK_10` represents the Primary key, which is the user and the month of entry. This query would return all the entries from "LK" in the month of October.
+
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=80% height=80% />
-
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2_wo.png" alt="Journal" title="Journal" width=80% height=80% />
 
 #### Final Assignment 3 (IoT Temperature Sensor Data) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment3/final_assignment_3.md) 
-* Final Assignment was a culmination of work from [week 8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week9](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week9), [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week11), and [week12](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week12)
+* Final Assignment was a culmination of work from [week 8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week9](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week9), [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo), and [week12](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)
 * The purpose of this project was to connect an IoT temperature sensor, and send the values to our AWS PostgreSQL Database, which we setup for Project 1, then filter and visualize the data on the frontend using D3.js.
 * After incorporating a number of changes to the template [sensor.txt file](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/sensor.txt), I was able able to create an a representation of the data as a series of small bars.
 * My next goal is to create comparision range of outdoor temperatures for the same period, as designed for in [week 10](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week10/images/Temperature_sensing_Sketch.png). 

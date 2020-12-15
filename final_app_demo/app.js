@@ -89,7 +89,7 @@ app.get('/aa', function(req, res) {
                  
     var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
                     FROM aalocations 
-                    WHERE address LIKE '%42nd%' OR lat > 40.75 
+                    WHERE address LIKE '%96th%' OR lat > 40.805 
                     GROUP BY lat, lng;`;
 
     client.query(thisQuery, (qerr, qres) => {
