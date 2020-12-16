@@ -31,7 +31,9 @@ The purpose is to provide an overview and summary of work for final assignments 
 * This below view has the updated SQL query to bring in Location details and time details for each meeting on the day the app is open. Establishing an opacity layer for interaction with CSS Grid. More updates to come with user interaction. 
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/WIP_Mapping_AA.png" alt="Map" title="Map" width=80% height=80% />
+
 ---
+
 #### Final Assignment 2 (Process Blog) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment2/final_assignment_2.md) 
 
 * The process blog is a culmination of work from [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5), [week6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)
@@ -97,7 +99,9 @@ $(window).on('load', function() {
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Journal.png" alt="Journal" title="Journal" width=80% height=80% />
 
 * Additional work will be added in future iterations. 
+
 ---
+
 #### Final Assignment 3 (IoT Temperature Sensor Data) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment3/final_assignment_3.md) 
 * Final Assignment was a culmination of work from [week 8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week9](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week9), [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo), and [week12](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)
 * The purpose of this project was to connect an IoT temperature sensor, and send the values to our AWS PostgreSQL Database, which we setup for Project 1, then filter and visualize the data on the frontend using D3.js.
