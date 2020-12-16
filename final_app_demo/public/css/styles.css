@@ -85,8 +85,8 @@ td {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 15% 15% 15% 15% 15% 15%;
-  grid-template-rows: 15%;
+  grid-template-columns: 16% 15% 15% 15% 15% 18%;
+  grid-template-rows: 5%;
   grid-gap: 1rem;
   text-align: center;
   padding: 10px;
@@ -96,8 +96,10 @@ td {
 
 .grid-container > div {
   background-color: white;
-  border: solid 1px;
-  border-color: red;
+  border: solid 0.25px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  border-color: navy;
+  opacity: 80%;
   text-align:center;
   padding: 5px;
   margin: 5px;

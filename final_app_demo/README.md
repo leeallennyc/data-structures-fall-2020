@@ -91,7 +91,7 @@ $(window).on('load', function() {
 
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=80% height=80% />
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2_wo.png" alt="Journal" title="Journal" width=80% height=80% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Journal.png" alt="Journal" title="Journal" width=80% height=80% />
 
 #### Final Assignment 3 (IoT Temperature Sensor Data) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment3/final_assignment_3.md) 
 * Final Assignment was a culmination of work from [week 8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week9](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week9), [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo), and [week12](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)

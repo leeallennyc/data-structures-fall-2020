@@ -81,29 +81,28 @@ app.get('/aa', function(req, res) {
     
      // Connect to the AWS RDS Postgres database
     const client = new Pool(db_credentials);
-
-
-    var now = moment.tz(Date.now(), "America/New_York");    
-    var todayIndex = now.day();
-    var days = ['Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays', 'Sundays'];
-    var _today = days[todayIndex -1].toString();
-    var today = "'" + _today + "'";
-    // console.log(now);
-    // var dayy = now.day().toString();
-    // console.log(dayy);
-    // var hourr = now.hour().toString(); 
-    // console.log(hourr);
     
-    // let weekdays = {
-    //     "Mondays": 1,
-    //     "Tuesdays": 2,
-    //     "Wednesdays": 3,
-    //     "Thursdays": 4,
-    //     "Fridays": 5,
-    //     "Saturdays": 6,
-    //     "Sundays": 7
-    // }
-
+    var now = moment.tz(Date.now(), "America/New_York"); 
+    // console.log(now);
+    var todayIndex = now.day();
+    // console.log(todayIndex);
+    
+    // var dayy = now.day().toString();
+    // var hourr = now.hour().toString(); 
+    var days = [
+        'Mondays', 
+        'Tuesdays', 
+        'Wednesdays', 
+        'Thursdays', 
+        'Fridays', 
+        'Saturdays', 
+        'Sundays'];
+        
+    var _today = days[todayIndex -1].toString();
+    // console.log(_today);
+    var today = "'" + _today + "'";
+    // console.log(today);
+  
    
     // With gratitude for the help of Zhibang Jiang with the SQL query.          
     var thisQuery = `SELECT aalocations.meetingID, lat, lng, day, address, zipcode, buildingname,
@@ -113,7 +112,6 @@ app.get('/aa', function(req, res) {
                     WHERE aatimeLists.day = ` + today +
                     `GROUP BY lat, lng, day, meetingID, address, zipcode, buildingname
                     ORDER BY meetingID;`;
-
 
     client.query(thisQuery, (qerr, qres) => {
         if (qerr) { throw qerr }
@@ -127,7 +125,6 @@ app.get('/aa', function(req, res) {
         }
     });
 });
-
 
 
 app.get('/temperature', function(req, res) {
@@ -163,7 +160,6 @@ app.get('/processblog', function(req, res) {
         topic = req.query.type;
 }
     
-
     // Connect to the AWS DynamoDB database
     var dynamodb = new AWS.DynamoDB();
 
