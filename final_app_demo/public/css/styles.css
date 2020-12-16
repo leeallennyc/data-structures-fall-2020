@@ -1,10 +1,36 @@
 #mapid { height: 760px; }
 
+.card-container {
+  display: grid;
+  grid-template-columns: 30%;
+  text-align: center;
+  padding: 10px;
+  z-index: 999;
+}
+
+
+.card-container > div {
+  background-color: navy;
+  opacity: 60%;
+  border: solid 1px;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: orangered;
+  border-color: orangered;
+  text-align:center;
+  height: 600px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  z-index:999;
+}
+
+
 body {
   background-color: floralwhite;
   
   /*display: grid;*/
-  /*grid-template-rows:    repeat(4, 100px);*/
+  /*grid-template-rows: repeat(4, 100px);*/
   /*grid-template-columns: repeat(3, 1fr);*/
 }
 
@@ -19,7 +45,7 @@ table, th, td {
 }
 
 h3, p {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     color: red;
     text-align: center;
     margin: 20px;
@@ -64,6 +90,7 @@ td {
   grid-gap: 1rem;
   text-align: center;
   padding: 10px;
+  z-index: 999;
 }
 
 
@@ -76,6 +103,7 @@ td {
   margin: 5px;
   font-size: 16px;
   border-radius: 10px;
+  z-index:999;
 }
 
 

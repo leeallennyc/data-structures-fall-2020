@@ -37,7 +37,14 @@ var hx = `<!doctype html>
        crossorigin=""/>
 </head>
 <body>
-<div id="mapid"></div>
+<div id="mapid">
+    <div class="card-container">
+        <div>AA MEETINGS IN NYC</div>
+        
+    </div>
+</div>
+
+
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
@@ -46,7 +53,7 @@ var hx = `<!doctype html>
   `;
   
 var jx = `;
-    var mymap = L.map('mapid').setView([40.734636,-73.994997], 13);
+    var mymap = L.map('mapid').setView([40.734636,-73.994997], 15);
 
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
@@ -71,26 +78,42 @@ app.get('/', function(req, res) {
 
 // respond to requests for /aa
 app.get('/aa', function(req, res) {
-
-    var now = moment.tz(Date.now(), "America/New_York"); 
-    var dayy = now.day().toString(); 
-    var hourr = now.hour().toString(); 
-
-    // Connect to the AWS RDS Postgres database
-    const client = new Pool(db_credentials);
     
-    // SQL query 
-    // var thisQuery = `SELECT lat, lon, json_agg(json_build_object('loc', mtglocation, 'address', mtgaddress, 'time', tim, 'name', mtgname, 'day', day, 'types', types, 'shour', shour)) as meetings
-    //          FROM aadatall 
-    //          WHERE day = ` + dayy + 'and shour >= ' + hourr + 
-    //         `GROUP BY lat, lon
-    //         ;`;
+     // Connect to the AWS RDS Postgres database
+    const client = new Pool(db_credentials);
 
-                 
-    var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
-                    FROM aalocations 
-                    WHERE address LIKE '%96th%' OR lat > 40.805 
-                    GROUP BY lat, lng;`;
+
+    var now = moment.tz(Date.now(), "America/New_York");    
+    var todayIndex = now.day();
+    var days = ['Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays', 'Sundays'];
+    var _today = days[todayIndex -1].toString();
+    var today = "'" + _today + "'";
+    // console.log(now);
+    // var dayy = now.day().toString();
+    // console.log(dayy);
+    // var hourr = now.hour().toString(); 
+    // console.log(hourr);
+    
+    // let weekdays = {
+    //     "Mondays": 1,
+    //     "Tuesdays": 2,
+    //     "Wednesdays": 3,
+    //     "Thursdays": 4,
+    //     "Fridays": 5,
+    //     "Saturdays": 6,
+    //     "Sundays": 7
+    // }
+
+   
+    // With gratitude for the help of Zhibang Jiang with the SQL query.          
+    var thisQuery = `SELECT aalocations.meetingID, lat, lng, day, address, zipcode, buildingname,
+                    json_agg(json_build_object('buildingname', buildingname, 'meetingType', meetingType, 'day', day, 'startTime', startTime, 'endTime', endTime, 'meetingType', meetingType)) as meetings 
+                    FROM aalocations
+                    INNER JOIN aatimeLists USING(meetingID)
+                    WHERE aatimeLists.day = ` + today +
+                    `GROUP BY lat, lng, day, meetingID, address, zipcode, buildingname
+                    ORDER BY meetingID;`;
+
 
     client.query(thisQuery, (qerr, qres) => {
         if (qerr) { throw qerr }

@@ -26,7 +26,7 @@ The purpose is to provide an overview and summary of work for final assignments 
 * I will continue working on this connection -- by using either an AJAX request, AWS lambda function and Amazon API Gateway, or other process. 
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/AA_starterMap.png" alt="Map" title="Map" width=80% height=80% />
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/96th_map.png" alt="Map" title="Map" width=80% height=80% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/WIP_Mapping_AA.png" alt="Map" title="Map" width=80% height=80% />
 
  
 #### Final Assignment 2 (Process Blog) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment2/final_assignment_2.md) 
