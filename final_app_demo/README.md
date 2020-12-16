@@ -12,23 +12,26 @@ The purpose is to provide an overview and summary of work for final assignments 
 * This assignment is a culmination of work from [week 1](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week1), [week 2](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week2), [week 3](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week3), [week 4](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week4), [week 6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week 7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week 10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week 11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo). 
 * Our goal was to re-architect an Alcoholics Anonymous map based application, from scraping `.txt` and `.html` files, cleaning and reorganizing to JSON format, and inserting our data into a PostgreSQL database. Details from each week are included above, this represents a high level overview of where the project currently is.  
 
-* At the moment, I'm working through how to connect the front and backends, and am having trouble with connecting user inputs to the client view. It seems as though I'm missing a critcal piece to make this interactive with user input.
+* In its current state, the app doesn't account for connect the backend and frontend interface beyond CSS grid. Functionality will be updated in the future to account for user interaction. 
 
-* For this current view of the AA Map, I changed the sample query to one where I could test a few locations above a certain latitude:
+* For the below view of the AA Map, I changed the sample query to one where I could test a few locations above a certain latitude:
 ```js
  var thisQuery = `SELECT lat, lng, json_agg(json_build_object('loc', buildingName, 'address', address, 'zipcode', zipcode)) as meetings 
                     FROM aalocations 
                     WHERE address LIKE '%96th%' OR lat > 40.801
                     GROUP BY lat, lng;`;
 ```
-* The current view of the map:
-* At the moment, I'm having trouble with connecting the database queries with the front end in Leaflet.js -- resulting in problems with the project being dynamic for user input.
-* I will continue working on this connection -- by using either an AJAX request, AWS lambda function and Amazon API Gateway, or other process. 
+
+* The challenge currently is to bridge the database queries with the frontend in Leaflet.js -- so the result will be dynamic for user input.
+* I will continue working on this connection -- by using either an AJAX request, AWS lambda function, or Amazon API Gateway, or other process--still researching.  
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/AA_starterMap.png" alt="Map" title="Map" width=80% height=80% />
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/WIP_Mapping_AA.png" alt="Map" title="Map" width=80% height=80% />
 
- 
+
+* This below view has the updated SQL query to bring in Location details and time details for each meeting on the day the app is open. Establishing an opacity layer for interaction with CSS Grid. More updates to come with user interaction. 
+
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/WIP_Mapping_AA.png" alt="Map" title="Map" width=80% height=80% />
+---
 #### Final Assignment 2 (Process Blog) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment2/final_assignment_2.md) 
 
 * The process blog is a culmination of work from [week5](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week5), [week6](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week6), [week7](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week7), [week8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week10](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week10), and [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)
@@ -88,16 +91,20 @@ $(window).on('load', function() {
 ```
 * A work in progress. The output from the table and returned data from DynamoDB -- adding a UUID column for future filtering:
 * At the moment the URL query statement `?type=LK_10` represents the Primary key, which is the user and the month of entry. This query would return all the entries from "LK" in the month of October.
+* The primary key serves as a simple dual function to find the Author of the entry and the month:
 
-
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/PB_DS_Project2.png" alt="Journal" title="Journal" width=80% height=80% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Maintainability_UUIDs.png" alt="Journal" title="Journal" width=80% height=80% />
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Journal.png" alt="Journal" title="Journal" width=80% height=80% />
 
+* Additional work will be added in future iterations. 
+---
 #### Final Assignment 3 (IoT Temperature Sensor Data) -- Description [here](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/Final_Assignment3/final_assignment_3.md) 
 * Final Assignment was a culmination of work from [week 8](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week8), [week9](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/week9), [week11](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo), and [week12](https://github.com/leeallennyc/data-structures-fall-2020/tree/master/final_app_demo)
 * The purpose of this project was to connect an IoT temperature sensor, and send the values to our AWS PostgreSQL Database, which we setup for Project 1, then filter and visualize the data on the frontend using D3.js.
-* After incorporating a number of changes to the template [sensor.txt file](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/sensor.txt), I was able able to create an a representation of the data as a series of small bars.
+* After incorporating a number of changes to the template [sensor.txt file](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/templates/sensor.txt), I was able able to create an a representation of the data as a series of small bars representing the avg temperature for the last 30 days.
 * My next goal is to create comparision range of outdoor temperatures for the same period, as designed for in [week 10](https://github.com/leeallennyc/data-structures-fall-2020/blob/master/week10/images/Temperature_sensing_Sketch.png). 
+
+* Changing the format to Fahrenheit:
 ```js
 
 var yAxis = d3.svg.axis()
@@ -108,6 +115,8 @@ var yAxis = d3.svg.axis()
         return d+"F";
     }); 
 ```
+* Query to extract average temperatures:
+
 ```js
   // SQL query 
     var q = `SELECT EXTRACT(DAY FROM sensorTime) as sensorday,
@@ -116,7 +125,7 @@ var yAxis = d3.svg.axis()
              GROUP BY sensorday
              ORDER BY sensorday;`;
 ```
-* Current state of the visualization, and again -- trying to understand how to incorporate user input for dynamic view:
+* Current state of the visualization is below, I intend to incorporate user input for dynamic view in futures iterations. 
 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/Sensor_temp.png" alt="Sensor" title="Sensor" width=80% height=80%/>
 

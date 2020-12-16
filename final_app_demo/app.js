@@ -84,8 +84,8 @@ app.get('/aa', function(req, res) {
     
     var now = moment.tz(Date.now(), "America/New_York"); 
     // console.log(now);
-    var todayIndex = now.day();
-    // console.log(todayIndex);
+    var indexDay = now.day();
+    // console.log(indexDay);
     
     // var dayy = now.day().toString();
     // var hourr = now.hour().toString(); 
@@ -98,13 +98,13 @@ app.get('/aa', function(req, res) {
         'Saturdays', 
         'Sundays'];
         
-    var _today = days[todayIndex -1].toString();
-    // console.log(_today);
-    var today = "'" + _today + "'";
+    var currentDay = days[indexDay -1].toString();
+    // console.log(_currentDay);
+    var today = "'" + currentDay + "'";
     // console.log(today);
   
    
-    // With gratitude for the help of Zhibang Jiang with the SQL query.          
+    // With gratitude for the help of Zhibang Jiang with the SQL query. Was stuck on the INNER JOIN and ORDER BY part.          
     var thisQuery = `SELECT aalocations.meetingID, lat, lng, day, address, zipcode, buildingname,
                     json_agg(json_build_object('buildingname', buildingname, 'meetingType', meetingType, 'day', day, 'startTime', startTime, 'endTime', endTime, 'meetingType', meetingType)) as meetings 
                     FROM aalocations
@@ -125,7 +125,6 @@ app.get('/aa', function(req, res) {
         }
     });
 });
-
 
 app.get('/temperature', function(req, res) {
 
