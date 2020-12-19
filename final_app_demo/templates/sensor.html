@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="utf-8">
 <!-- Adapted from: http://bl.ocks.org/Caged/6476579 -->
 
@@ -61,7 +61,7 @@ body {
 <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script>
 
-var data = {{{sensordata}}} ; 
+var data = {{{sensordata}}}; 
 
 
 var margin = {top: 40, right: 20, bottom: 30, left: 40},
@@ -134,5 +134,4 @@ svg.call(tip);
       .attr("height", function(d) { return height -225; })
       .on('mouseover', tip.show)
       .on('mouseout', tip.hide)
-
 </script>

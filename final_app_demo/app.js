@@ -9,10 +9,10 @@ const querystring = require('querystring');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const indexSource = fs.readFileSync("templates/sensor.txt").toString();
+const indexSource = fs.readFileSync("templates/sensor.html").toString();
 var template = handlebars.compile(indexSource, { strict: true });
 
-const pbSource = fs.readFileSync("templates/pb.txt").toString();
+const pbSource = fs.readFileSync("templates/pb.html").toString();
 var pbtemplate = handlebars.compile(pbSource, { strict: true });
 
 // AWS RDS credentials
@@ -29,7 +29,7 @@ var hx = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <title>AA Meetings</title>
-  <meta name="description" content="Meetings of AA in Manhattan">
+  <meta name="description" content="AA Meetings in Manhattan">
   <meta name="author" content="AA">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -39,12 +39,16 @@ var hx = `<!doctype html>
 <body>
 <div id="mapid">
     <div class="card-container">
-        <div>AA MEETINGS IN NYC</div>
-        
+        <div>AA MEETINGS IN NYC
+            <ul>
+                <li>Time goes here</li>
+                <li>Address </li>
+                <li>Start Time</li>
+                <li>End Time</li>
+            </ul>
+        </div>
     </div>
 </div>
-
-
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
@@ -63,6 +67,23 @@ var jx = `;
     id: 'mapbox/streets-v11',
         accessToken: 'pk.eyJ1Ijoidm9ucmFtc3kiLCJhIjoiY2pveGF1MmxoMjZnazNwbW8ya2dsZTRtNyJ9.mJ1kRVrVnwTFNdoKlQu_Cw'
     }).addTo(mymap);
+    
+    for (var x=0; x<data.length; x++) {
+        
+        let transformedData = data[x].meetings;
+        console.log(transformedData);
+        let dayofWeek = transformedData[0].day;
+        console.log(dayofWeek);
+        let meetingStart = transformedData[0].startTime;
+        console.log(meetingStart);
+        
+        
+        let stringTransformedData = JSON.stringify(transformedData);
+        console.log(stringTransformedData);
+        
+       
+    }
+    
 
     for (var i=0; i<data.length; i++) {
         L.marker( [data[i].lat, data[i].lng] ).bindPopup(JSON.stringify(data[i].meetings)).addTo(mymap);
@@ -106,7 +127,7 @@ app.get('/aa', function(req, res) {
    
     // With gratitude for the help of Zhibang Jiang with the SQL query. Was stuck on the INNER JOIN and ORDER BY part.          
     var thisQuery = `SELECT aalocations.meetingID, lat, lng, day, address, zipcode, buildingname,
-                    json_agg(json_build_object('buildingname', buildingname, 'meetingType', meetingType, 'day', day, 'startTime', startTime, 'endTime', endTime, 'meetingType', meetingType)) as meetings 
+                    json_agg(json_build_object('day', day, 'startTime', startTime, 'endTime', endTime, 'buildingname', buildingname, 'address', address, 'meetingType', meetingType)) as meetings 
                     FROM aalocations
                     INNER JOIN aatimeLists USING(meetingID)
                     WHERE aatimeLists.day = ` + today +
