@@ -2,7 +2,8 @@ var express = require('express'),
     app = express();
 const { Pool } = require('pg');
 var AWS = require('aws-sdk');
-const moment = require('moment-timezone');
+const moment = require('moment');
+const momentTimeZone = require('moment-timezone');
 const handlebars = require('handlebars');
 var fs = require('fs');
 const querystring = require('querystring');
@@ -39,13 +40,12 @@ var hx = `<!doctype html>
 <body>
 <div id="mapid">
     <div class="card-container">
-        <div>AA MEETINGS IN NYC
-            <ul>
-                <li>Time goes here</li>
-                <li>Address </li>
-                <li>Start Time</li>
-                <li>End Time</li>
-            </ul>
+        <div> 
+            <button onclick="updateMeetingDetails()">Change Paragraph</button></br>
+            AA MEETINGS IN NYC
+            <li id = "meetings-content">
+            Details go here
+            </p>
         </div>
     </div>
 </div>
@@ -73,21 +73,26 @@ var jx = `;
         let transformedData = data[x].meetings;
         console.log(transformedData);
         let dayofWeek = transformedData[0].day;
-        console.log(dayofWeek);
         let meetingStart = transformedData[0].startTime;
-        console.log(meetingStart);
-        
-        
-        let stringTransformedData = JSON.stringify(transformedData);
-        console.log(stringTransformedData);
-        
+        let meetingEnd = transformedData[0].endTime;
+        let place = transformedData[0].buildingname;
+        let addy = transformedData[0].address;
        
+        let meetingtimeString = "On " + dayofWeek + " Starting @ " + meetingStart + " and ending @ " + meetingEnd + " You can find us @ " + place + " " + addy;
+        console.log(meetingtimeString);
+        
+        
+        let newMeeting = L.marker( [data[x].lat, data[x].lng] ).bindPopup(meetingtimeString).addTo(mymap);
+       
+        function updateMeetingDetails() {
+        document.getElementById("meetings-content").innerHTML= meetingtimeString;
+        }
+
     }
     
+   
+   
 
-    for (var i=0; i<data.length; i++) {
-        L.marker( [data[i].lat, data[i].lng] ).bindPopup(JSON.stringify(data[i].meetings)).addTo(mymap);
-    }
     </script>
     </body>
     </html>`;
@@ -103,7 +108,11 @@ app.get('/aa', function(req, res) {
      // Connect to the AWS RDS Postgres database
     const client = new Pool(db_credentials);
     
-    var now = moment.tz(Date.now(), "America/New_York"); 
+    var now = moment.tz(Date.now(), "America/New_York");
+    
+    // let nownow = moment();
+    // console.log(nownow.format("LTS"));
+
     // console.log(now);
     var indexDay = now.day();
     // console.log(indexDay);
@@ -135,6 +144,7 @@ app.get('/aa', function(req, res) {
                     ORDER BY meetingID;`;
 
     client.query(thisQuery, (qerr, qres) => {
+        console.log(thisQuery);
         if (qerr) { throw qerr }
         
         else {

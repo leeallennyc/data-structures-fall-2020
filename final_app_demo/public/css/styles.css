@@ -1,5 +1,10 @@
 #mapid { height: 760px; }
 
+ul, li{
+    list-style-type: none;
+    z-index: 999;
+}
+
 .leaflet-popup-content {
     margin: 20px;
     font-family: Futura;
@@ -9,8 +14,8 @@
 
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
     background: white;
-    height: 150px;
-    width: 450px;
+    height: 100px;
+    width: 350px;
     color: #333;
     box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 }
@@ -37,6 +42,10 @@
   margin: 5px;
   font-size: 16px;
   border-radius: 10px;
+  z-index:999;
+}
+
+#meetings-content {
   z-index:999;
 }
 
