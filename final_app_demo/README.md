@@ -28,9 +28,9 @@ The purpose is to provide an overview and summary of work for final assignments 
 <img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/AA_starterMap.png" alt="Map" title="Map" width=80% height=80% />
 
 
-* This below view has the updated SQL query to bring in Location details and time details for each meeting on the day the app is open. Establishing an opacity layer for interaction with CSS Grid. More updates to come with user interaction. 
+* This below view has the updated SQL query to bring in Location details and time details for each meeting on the day the app is open. Establishing an opacity layer for interaction with CSS Grid. The idea is to be able to populate the other meetings happening on that day in the left hand grid.
 
-<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/WIP_Mapping_AA.png" alt="Map" title="Map" width=80% height=80% />
+<img src="https://github.com/leeallennyc/data-structures-fall-2020/blob/master/final_app_demo/images/AA_map_search.png" alt="Map" title="Map" width=80% height=80% />
 
 ---
 

@@ -31,7 +31,7 @@ ul, li{
 
 .card-container > div {
   background-color: navy;
-  opacity: 60%;
+  opacity: 70%;
   border: solid 1px;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   color: orangered;
@@ -47,6 +47,8 @@ ul, li{
 
 #meetings-content {
   z-index:999;
+  padding:10px;
+  margin: 25px;
 }
 
 

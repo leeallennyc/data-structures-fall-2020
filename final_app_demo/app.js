@@ -41,11 +41,10 @@ var hx = `<!doctype html>
 <div id="mapid">
     <div class="card-container">
         <div> 
-            <button onclick="updateMeetingDetails()">Change Paragraph</button></br>
-            AA MEETINGS IN NYC
+            <button onclick="updateMeetingDetails()">Check Other Meetings</button></br>
+            For This Location </br>
             <li id = "meetings-content">
-            Details go here
-            </p>
+            </li>
         </div>
     </div>
 </div>
@@ -87,12 +86,7 @@ var jx = `;
         function updateMeetingDetails() {
         document.getElementById("meetings-content").innerHTML= meetingtimeString;
         }
-
     }
-    
-   
-   
-
     </script>
     </body>
     </html>`;
